@@ -2,10 +2,10 @@
 using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
-using Righthand.RetroDbgDataProvider.Models;
-using Righthand.RetroDbgDataProvider.Models.Parsing;
 using Righthand.RetroDbgDataProvider.Extensions;
 using Righthand.RetroDbgDataProvider.KickAssembler.Services.Models;
+using Righthand.RetroDbgDataProvider.Models;
+using Righthand.RetroDbgDataProvider.Models.Parsing;
 using static Righthand.RetroDbgDataProvider.KickAssembler.KickAssemblerParser;
 
 namespace Righthand.RetroDbgDataProvider.KickAssembler.Services.Implementation;

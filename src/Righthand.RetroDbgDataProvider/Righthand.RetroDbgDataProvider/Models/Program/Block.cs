@@ -1,5 +1,3 @@
-using System.Collections.Immutable;
-
 namespace Righthand.RetroDbgDataProvider.Models.Program;
 /// <summary>
 /// Application block.

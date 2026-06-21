@@ -9,7 +9,7 @@ public class FilesChangedEventArgs : EventArgs
         FrozenSet<string>.Empty,
         FrozenSet<string>.Empty, FrozenSet<string>.Empty, CancellationToken.None);
 
-    private List<Task> _clientTasks = new List<Task>();
+    private readonly List<Task> _clientTasks = new List<Task>();
     public FrozenSet<string> Modified { get; }
     public FrozenSet<string> Deleted { get; }
     public FrozenSet<string> Added { get; }

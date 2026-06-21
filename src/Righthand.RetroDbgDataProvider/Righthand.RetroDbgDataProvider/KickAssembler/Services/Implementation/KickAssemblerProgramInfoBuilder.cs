@@ -1,5 +1,4 @@
 using System.Collections.Frozen;
-using System.Collections.Immutable;
 using Microsoft.Extensions.Logging;
 using Righthand.RetroDbgDataProvider.KickAssembler.Services.Abstract;
 using Righthand.RetroDbgDataProvider.Models;

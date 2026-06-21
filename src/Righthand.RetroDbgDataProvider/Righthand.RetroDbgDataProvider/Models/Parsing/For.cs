@@ -1,5 +1,4 @@
-﻿using Antlr4.Runtime;
-using Righthand.RetroDbgDataProvider.KickAssembler;
+﻿using Righthand.RetroDbgDataProvider.KickAssembler;
 
 namespace Righthand.RetroDbgDataProvider.Models.Parsing;
 

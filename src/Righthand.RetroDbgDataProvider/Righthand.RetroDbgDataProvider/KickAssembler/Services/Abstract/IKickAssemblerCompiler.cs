@@ -1,7 +1,5 @@
 ﻿using System.Collections.Frozen;
-using System.Collections.Immutable;
 using Righthand.RetroDbgDataProvider.KickAssembler.Services.Implementation;
-using Righthand.RetroDbgDataProvider.Models;
 using Righthand.RetroDbgDataProvider.Models.Parsing;
 
 namespace Righthand.RetroDbgDataProvider.KickAssembler.Services.Abstract;

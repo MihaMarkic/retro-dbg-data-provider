@@ -1,8 +1,7 @@
 ﻿namespace Righthand.RetroDbgDataProvider.Models.Program;
 
-
 /// <summary>
-/// Represents open ended text range in single line.
+/// Represents open-ended text range in single line.
 /// </summary>
 /// <param name="Start"></param>
 /// <param name="End"></param>

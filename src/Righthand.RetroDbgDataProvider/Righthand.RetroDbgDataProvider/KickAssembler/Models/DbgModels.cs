@@ -1,6 +1,4 @@
-﻿using System.Collections.Immutable;
-
-namespace Righthand.RetroDbgDataProvider.KickAssembler.Models;
+﻿namespace Righthand.RetroDbgDataProvider.KickAssembler.Models;
 
 /// <summary>
 /// Structure representing Kick Assembler's .dbg file

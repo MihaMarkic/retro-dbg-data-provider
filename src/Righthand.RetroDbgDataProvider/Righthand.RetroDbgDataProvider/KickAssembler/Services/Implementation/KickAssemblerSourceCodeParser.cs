@@ -4,7 +4,6 @@ using Antlr4.Runtime.Tree;
 using Microsoft.Extensions.Logging;
 using Righthand.RetroDbgDataProvider.KickAssembler.Models;
 using Righthand.RetroDbgDataProvider.KickAssembler.Services.Abstract;
-using Righthand.RetroDbgDataProvider.KickAssembler.Services.Models;
 using Righthand.RetroDbgDataProvider.Models;
 using Righthand.RetroDbgDataProvider.Services.Abstract;
 using Righthand.RetroDbgDataProvider.Services.Implementation;
