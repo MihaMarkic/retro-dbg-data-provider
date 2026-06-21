@@ -36,7 +36,7 @@ public sealed class KickAssemblerSourceCodeParser : SourceCodeParser<KickAssembl
         _fileService = fileService;
     }
 
-    /// <inheritdoc cref="ISourceCodeParser"/>
+    /// <inheritdoc />
     public async Task InitialParseAsync(string projectDirectory,
         FrozenDictionary<string, InMemoryFileContent> inMemoryFilesContent,
         FrozenSet<string> inDefines,
@@ -126,7 +126,7 @@ public sealed class KickAssemblerSourceCodeParser : SourceCodeParser<KickAssembl
     }
 
     /// <summary>
-    /// Parse file given in <param name="filePath" /> argument and all referenced files.
+    /// Parse file given in <paramref name="filePath" /> argument and all referenced files.
     /// </summary>
     /// <param name="parsed"></param>
     /// <param name="filePath"></param>
@@ -193,7 +193,7 @@ public sealed class KickAssemblerSourceCodeParser : SourceCodeParser<KickAssembl
     }
 
     /// <summary>
-    /// Loads referenced files and caches them to <param name="parsed"/>.
+    /// Loads referenced files and caches them to <paramref name="parsed"/>.
     /// </summary>
     /// <param name="parsed"></param>
     /// <param name="parsedFile"></param>
@@ -387,7 +387,7 @@ public sealed class KickAssemblerSourceCodeParser : SourceCodeParser<KickAssembl
         return builder.ToImmutableArray();
     }
 
-
+    /// <inheritdoc />
     protected override async Task DisposeAsyncCore()
     {
         if (!IsDisposed)

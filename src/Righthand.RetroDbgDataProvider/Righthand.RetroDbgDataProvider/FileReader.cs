@@ -3,8 +3,17 @@ using System.Text;
 
 namespace Righthand.RetroDbgDataProvider;
 
+/// <summary>
+/// Provides support for reading file char by char.
+/// </summary>
 public static class FileReader
 {
+    /// <summary>
+    /// Reads entire file char by char.
+    /// </summary>
+    /// <param name="stream"></param>
+    /// <param name="ct"></param>
+    /// <returns></returns>
     public static async IAsyncEnumerable<char> ReadAllTextAsChars(Stream stream, [EnumeratorCancellation]CancellationToken ct = default)
     {
         const int BufferSize = 8096;
