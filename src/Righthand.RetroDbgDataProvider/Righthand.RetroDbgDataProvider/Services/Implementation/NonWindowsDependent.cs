@@ -1,5 +1,4 @@
-﻿using System.Buffers;
-using System.Text;
+﻿using System.Text;
 using Righthand.RetroDbgDataProvider.Services.Abstract;
 
 namespace Righthand.RetroDbgDataProvider.Services.Implementation;
@@ -7,7 +6,7 @@ namespace Righthand.RetroDbgDataProvider.Services.Implementation;
 /// <summary>
 /// Commmon non windows OS dependent code.
 /// </summary>
-public abstract class NonWindowsDependent
+public class NonWindowsDependent: IOSDependent
 {
     /// <inheritdoc />
     public StringComparison FileStringComparison => StringComparison.CurrentCulture;
@@ -17,6 +16,8 @@ public abstract class NonWindowsDependent
     public string ViceExeName => "x64sc";
     /// <inheritdoc />
     public string JavaExeName => "java";
+    public string FileAppOpenName => "open";
+
     /// <inheritdoc />
     public string NormalizePath(string path) => path.Replace('\\', '/');
     /// <inheritdoc />

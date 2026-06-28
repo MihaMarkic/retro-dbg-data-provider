@@ -3,7 +3,6 @@ using System.Diagnostics;
 using Antlr4.Runtime;
 using Righthand.RetroDbgDataProvider.Models.Parsing;
 using Righthand.RetroDbgDataProvider.Models.Program;
-using Label = Righthand.RetroDbgDataProvider.Models.Parsing.Label;
 
 namespace Righthand.RetroDbgDataProvider.Models;
 
