@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:/GitProjects/Righthand/C64/retro-dbg-data-provider/src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider/KickAssembler/PreprocessorCondition/PreprocessorConditionParser.g4 by ANTLR 4.13.2
+// Generated from /home/miha/projects/rthand/c64/retro-dbg-data-provider/src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider/KickAssembler/PreprocessorCondition/PreprocessorConditionParser.g4 by ANTLR 4.13.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace Righthand.Retro.KickAssembler.PreprocessorCondition {
+namespace Righthand.RetroDbgDataProvider.KickAssembler.PreprocessorCondition {
 using System;
 using System.IO;
 using System.Text;
@@ -327,4 +327,4 @@ public partial class PreprocessorConditionParser : Parser {
 
 
 }
-} // namespace Righthand.Retro.KickAssembler.PreprocessorCondition
+} // namespace Righthand.RetroDbgDataProvider.KickAssembler.PreprocessorCondition

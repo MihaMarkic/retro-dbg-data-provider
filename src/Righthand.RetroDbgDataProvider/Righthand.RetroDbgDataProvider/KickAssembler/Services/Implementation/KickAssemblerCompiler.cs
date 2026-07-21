@@ -23,7 +23,7 @@ public partial class KickAssemblerCompiler : IKickAssemblerCompiler
         _logger = logger;
     }
 
-    internal string CreateProcessArguments(string file,string outputDir, KickAssemblerCompilerSettings settings)
+    internal static string CreateProcessArguments(string file,string outputDir, KickAssemblerCompilerSettings settings)
     {
         const string bytedump = "bytedump.dmp";
         // specific path to kick assembler binaries to overrides bundled ones

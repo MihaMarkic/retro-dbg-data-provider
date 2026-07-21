@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:/GitProjects/Righthand/C64/retro-dbg-data-provider/src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider/KickAssembler/PreprocessorCondition/PreprocessorConditionParser.g4 by ANTLR 4.13.2
+// Generated from /home/miha/projects/rthand/c64/retro-dbg-data-provider/src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider/KickAssembler/PreprocessorCondition/PreprocessorConditionParser.g4 by ANTLR 4.13.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace Righthand.Retro.KickAssembler.PreprocessorCondition {
+namespace Righthand.RetroDbgDataProvider.KickAssembler.PreprocessorCondition {
 
 using Antlr4.Runtime.Misc;
 using IErrorNode = Antlr4.Runtime.Tree.IErrorNode;
@@ -106,4 +106,4 @@ public partial class PreprocessorConditionParserBaseListener : IPreprocessorCond
 	/// <remarks>The default implementation does nothing.</remarks>
 	public virtual void VisitErrorNode([NotNull] IErrorNode node) { }
 }
-} // namespace Righthand.Retro.KickAssembler.PreprocessorCondition
+} // namespace Righthand.RetroDbgDataProvider.KickAssembler.PreprocessorCondition

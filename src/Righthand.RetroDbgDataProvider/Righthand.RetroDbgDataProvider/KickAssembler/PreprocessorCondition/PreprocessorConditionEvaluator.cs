@@ -1,7 +1,6 @@
 ﻿using System.Collections.Frozen;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
-using Righthand.Retro.KickAssembler.PreprocessorCondition;
 
 namespace Righthand.RetroDbgDataProvider.KickAssembler.PreprocessorCondition;
 

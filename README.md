@@ -54,4 +54,8 @@ where `debugData` argument is output from [Debug file parser](#debug-file-parser
 
 Clone repository.
 
-Since Kick Assembler binaries are not included in this repository, it's required to download them and manual install them: in `src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider` subdirectory create directory `binaries/KickAss` and place inside Kick Assembler files `KickAss.cfg` and `KickAss.jar`. 
+Since Kick Assembler binaries are not included in this repository, it's required to download them and manual install them: in `src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider` subdirectory create directory `binaries/KickAss` and place inside Kick Assembler files `KickAss.cfg` and `KickAss.jar`.
+
+## Generate ANTLR code
+
+`antlr4 -Dlanguage=CSharp -package "Righthand.GodotTscnParser.Engine.Grammar"`
