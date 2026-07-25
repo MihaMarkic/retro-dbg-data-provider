@@ -147,6 +147,7 @@ public class ParserTest: ParserBootstrap<ParserTest>
         [TestCase("Sample2")]
         [TestCase("Sample3")]
         [TestCase("Sample4")]
+        [TestCase("Sample5")]
         public void TestValid(string input)
         {
             var content = LoadKickAssSample($"{input}.asm");

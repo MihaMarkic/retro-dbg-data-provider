@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/miha/projects/rthand/c64/retro-dbg-data-provider/src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider/KickAssembler/Grammar/KickAssemblerParser.g4 by ANTLR 4.13.2
+// Generated from KickAssemblerParser.g4 by ANTLR 4.13.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -168,6 +168,18 @@ public partial class KickAssemblerParserBaseListener : IKickAssemblerParserListe
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitArgument([NotNull] KickAssemblerParser.ArgumentContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="KickAssemblerParser.variableReference"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterVariableReference([NotNull] KickAssemblerParser.VariableReferenceContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="KickAssemblerParser.variableReference"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitVariableReference([NotNull] KickAssemblerParser.VariableReferenceContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="KickAssemblerParser.labelOffsetReference"/>.
 	/// <para>The default implementation does nothing.</para>

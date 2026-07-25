@@ -70,5 +70,8 @@
     <None Update="Samples\KickAssembler\SimpleImport\build\main.dbg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Samples\KickAssembler\Sample5.asm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

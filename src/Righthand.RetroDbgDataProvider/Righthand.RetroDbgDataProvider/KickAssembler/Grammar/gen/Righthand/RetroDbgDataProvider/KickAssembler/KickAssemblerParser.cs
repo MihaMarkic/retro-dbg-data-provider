@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/miha/projects/rthand/c64/retro-dbg-data-provider/src/Righthand.RetroDbgDataProvider/Righthand.RetroDbgDataProvider/KickAssembler/Grammar/KickAssemblerParser.g4 by ANTLR 4.13.2
+// Generated from KickAssemblerParser.g4 by ANTLR 4.13.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -148,43 +148,44 @@ public partial class KickAssemblerParser : Parser {
 	public const int
 		RULE_eol = 0, RULE_program = 1, RULE_units = 2, RULE_unit = 3, RULE_errorSyntax = 4, 
 		RULE_label = 5, RULE_instruction = 6, RULE_scope = 7, RULE_namedScope = 8, 
-		RULE_argumentList = 9, RULE_argument = 10, RULE_labelOffsetReference = 11, 
-		RULE_expression = 12, RULE_binaryop = 13, RULE_assignment_expression = 14, 
-		RULE_shorthand_assignment_expression = 15, RULE_unary_operator = 16, RULE_compareop = 17, 
-		RULE_classFunction = 18, RULE_function = 19, RULE_condition = 20, RULE_compiler_statement = 21, 
-		RULE_print = 22, RULE_printnow = 23, RULE_forInit = 24, RULE_forVar = 25, 
-		RULE_var = 26, RULE_const = 27, RULE_if = 28, RULE_errorif = 29, RULE_eval = 30, 
-		RULE_evalAssignment = 31, RULE_break = 32, RULE_watch = 33, RULE_watchArguments = 34, 
-		RULE_enum = 35, RULE_enumValues = 36, RULE_enumValue = 37, RULE_for = 38, 
-		RULE_while = 39, RULE_struct = 40, RULE_variableList = 41, RULE_variable = 42, 
-		RULE_functionDefine = 43, RULE_return = 44, RULE_macroDefine = 45, RULE_pseudoCommandDefine = 46, 
-		RULE_pseudoCommandDefineArguments = 47, RULE_namespace = 48, RULE_labelDirective = 49, 
-		RULE_plugin = 50, RULE_segment = 51, RULE_segmentDef = 52, RULE_segmentOut = 53, 
-		RULE_fileDirective = 54, RULE_diskDirective = 55, RULE_diskDirectiveContent = 56, 
-		RULE_parameterMap = 57, RULE_parameterMapItems = 58, RULE_parameterMapItem = 59, 
-		RULE_modify = 60, RULE_fileModify = 61, RULE_assert = 62, RULE_assertError = 63, 
-		RULE_pseudopc = 64, RULE_zp = 65, RULE_zpArgumentList = 66, RULE_zpArgument = 67, 
-		RULE_fileName = 68, RULE_preprocessorDirective = 69, RULE_preprocessorDefine = 70, 
-		RULE_preprocessorUndef = 71, RULE_preprocessorImport = 72, RULE_preprocessorImportIf = 73, 
-		RULE_preprocessorImportOnce = 74, RULE_preprocessorIf = 75, RULE_preprocessorBlock = 76, 
-		RULE_preprocessorCondition = 77, RULE_directive = 78, RULE_memoryDirective = 79, 
-		RULE_cpuDirective = 80, RULE_byteDirective = 81, RULE_wordDirective = 82, 
-		RULE_dwordDirective = 83, RULE_textDirective = 84, RULE_fillDirective = 85, 
-		RULE_fillDirectiveArguments = 86, RULE_fillExpression = 87, RULE_encodingDirective = 88, 
-		RULE_importDataDirective = 89, RULE_labelName = 90, RULE_atName = 91, 
-		RULE_file = 92, RULE_numberList = 93, RULE_numericList = 94, RULE_numeric = 95, 
-		RULE_number = 96, RULE_lohibyte = 97, RULE_decNumber = 98, RULE_hexNumber = 99, 
-		RULE_binNumber = 100, RULE_boolean = 101, RULE_opcodeExtension = 102, 
-		RULE_fullOpcode = 103, RULE_opcode = 104, RULE_color = 105, RULE_opcodeConstant = 106;
+		RULE_argumentList = 9, RULE_argument = 10, RULE_variableReference = 11, 
+		RULE_labelOffsetReference = 12, RULE_expression = 13, RULE_binaryop = 14, 
+		RULE_assignment_expression = 15, RULE_shorthand_assignment_expression = 16, 
+		RULE_unary_operator = 17, RULE_compareop = 18, RULE_classFunction = 19, 
+		RULE_function = 20, RULE_condition = 21, RULE_compiler_statement = 22, 
+		RULE_print = 23, RULE_printnow = 24, RULE_forInit = 25, RULE_forVar = 26, 
+		RULE_var = 27, RULE_const = 28, RULE_if = 29, RULE_errorif = 30, RULE_eval = 31, 
+		RULE_evalAssignment = 32, RULE_break = 33, RULE_watch = 34, RULE_watchArguments = 35, 
+		RULE_enum = 36, RULE_enumValues = 37, RULE_enumValue = 38, RULE_for = 39, 
+		RULE_while = 40, RULE_struct = 41, RULE_variableList = 42, RULE_variable = 43, 
+		RULE_functionDefine = 44, RULE_return = 45, RULE_macroDefine = 46, RULE_pseudoCommandDefine = 47, 
+		RULE_pseudoCommandDefineArguments = 48, RULE_namespace = 49, RULE_labelDirective = 50, 
+		RULE_plugin = 51, RULE_segment = 52, RULE_segmentDef = 53, RULE_segmentOut = 54, 
+		RULE_fileDirective = 55, RULE_diskDirective = 56, RULE_diskDirectiveContent = 57, 
+		RULE_parameterMap = 58, RULE_parameterMapItems = 59, RULE_parameterMapItem = 60, 
+		RULE_modify = 61, RULE_fileModify = 62, RULE_assert = 63, RULE_assertError = 64, 
+		RULE_pseudopc = 65, RULE_zp = 66, RULE_zpArgumentList = 67, RULE_zpArgument = 68, 
+		RULE_fileName = 69, RULE_preprocessorDirective = 70, RULE_preprocessorDefine = 71, 
+		RULE_preprocessorUndef = 72, RULE_preprocessorImport = 73, RULE_preprocessorImportIf = 74, 
+		RULE_preprocessorImportOnce = 75, RULE_preprocessorIf = 76, RULE_preprocessorBlock = 77, 
+		RULE_preprocessorCondition = 78, RULE_directive = 79, RULE_memoryDirective = 80, 
+		RULE_cpuDirective = 81, RULE_byteDirective = 82, RULE_wordDirective = 83, 
+		RULE_dwordDirective = 84, RULE_textDirective = 85, RULE_fillDirective = 86, 
+		RULE_fillDirectiveArguments = 87, RULE_fillExpression = 88, RULE_encodingDirective = 89, 
+		RULE_importDataDirective = 90, RULE_labelName = 91, RULE_atName = 92, 
+		RULE_file = 93, RULE_numberList = 94, RULE_numericList = 95, RULE_numeric = 96, 
+		RULE_number = 97, RULE_lohibyte = 98, RULE_decNumber = 99, RULE_hexNumber = 100, 
+		RULE_binNumber = 101, RULE_boolean = 102, RULE_opcodeExtension = 103, 
+		RULE_fullOpcode = 104, RULE_opcode = 105, RULE_color = 106, RULE_opcodeConstant = 107;
 	public static readonly string[] ruleNames = {
 		"eol", "program", "units", "unit", "errorSyntax", "label", "instruction", 
-		"scope", "namedScope", "argumentList", "argument", "labelOffsetReference", 
-		"expression", "binaryop", "assignment_expression", "shorthand_assignment_expression", 
-		"unary_operator", "compareop", "classFunction", "function", "condition", 
-		"compiler_statement", "print", "printnow", "forInit", "forVar", "var", 
-		"const", "if", "errorif", "eval", "evalAssignment", "break", "watch", 
-		"watchArguments", "enum", "enumValues", "enumValue", "for", "while", "struct", 
-		"variableList", "variable", "functionDefine", "return", "macroDefine", 
+		"scope", "namedScope", "argumentList", "argument", "variableReference", 
+		"labelOffsetReference", "expression", "binaryop", "assignment_expression", 
+		"shorthand_assignment_expression", "unary_operator", "compareop", "classFunction", 
+		"function", "condition", "compiler_statement", "print", "printnow", "forInit", 
+		"forVar", "var", "const", "if", "errorif", "eval", "evalAssignment", "break", 
+		"watch", "watchArguments", "enum", "enumValues", "enumValue", "for", "while", 
+		"struct", "variableList", "variable", "functionDefine", "return", "macroDefine", 
 		"pseudoCommandDefine", "pseudoCommandDefineArguments", "namespace", "labelDirective", 
 		"plugin", "segment", "segmentDef", "segmentOut", "fileDirective", "diskDirective", 
 		"diskDirectiveContent", "parameterMap", "parameterMapItems", "parameterMapItem", 
@@ -421,12 +422,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitEol(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEol(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -470,12 +465,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitProgram(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitProgram(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -485,9 +474,9 @@ public partial class KickAssemblerParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 216;
+			State = 218;
 			units();
-			State = 217;
+			State = 219;
 			Match(Eof);
 			}
 		}
@@ -531,12 +520,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitUnits(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitUnits(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -545,47 +528,47 @@ public partial class KickAssemblerParser : Parser {
 		EnterRule(_localctx, 4, RULE_units);
 		int _la;
 		try {
-			State = 233;
+			State = 235;
 			ErrorHandler.Sync(this);
 			switch ( Interpreter.AdaptivePredict(TokenStream,1,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 219;
-				unit();
 				State = 221;
+				unit();
+				State = 223;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				do {
 					{
 					{
-					State = 220;
+					State = 222;
 					Match(SEMICOLON);
 					}
 					}
-					State = 223;
+					State = 225;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				} while ( _la==SEMICOLON );
-				State = 225;
+				State = 227;
 				units();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 227;
-				unit();
-				State = 228;
-				eol();
 				State = 229;
+				unit();
+				State = 230;
+				eol();
+				State = 231;
 				units();
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 231;
+				State = 233;
 				unit();
 				}
 				break;
@@ -647,12 +630,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitUnit(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitUnit(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -660,62 +637,62 @@ public partial class KickAssemblerParser : Parser {
 		UnitContext _localctx = new UnitContext(Context, State);
 		EnterRule(_localctx, 6, RULE_unit);
 		try {
-			State = 243;
+			State = 245;
 			ErrorHandler.Sync(this);
 			switch ( Interpreter.AdaptivePredict(TokenStream,2,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 235;
+				State = 237;
 				instruction();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 236;
+				State = 238;
 				label();
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 237;
+				State = 239;
 				directive();
 				}
 				break;
 			case 4:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 238;
+				State = 240;
 				namedScope();
 				}
 				break;
 			case 5:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 239;
+				State = 241;
 				scope();
 				}
 				break;
 			case 6:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 240;
+				State = 242;
 				compiler_statement();
 				}
 				break;
 			case 7:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 241;
+				State = 243;
 				preprocessorDirective();
 				}
 				break;
 			case 8:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 242;
+				State = 244;
 				errorSyntax();
 				}
 				break;
@@ -750,12 +727,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitErrorSyntax(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitErrorSyntax(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -766,7 +737,7 @@ public partial class KickAssemblerParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 245;
+			State = 247;
 			_la = TokenStream.LA(1);
 			if ( !(_la==UNQUOTED_STRING || _la==DOT_UNQUOTED_STRING) ) {
 			ErrorHandler.RecoverInline(this);
@@ -811,12 +782,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitLabel(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitLabel(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -824,26 +789,26 @@ public partial class KickAssemblerParser : Parser {
 		LabelContext _localctx = new LabelContext(Context, State);
 		EnterRule(_localctx, 10, RULE_label);
 		try {
-			State = 254;
+			State = 256;
 			ErrorHandler.Sync(this);
 			switch ( Interpreter.AdaptivePredict(TokenStream,3,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 247;
-				labelName();
-				State = 248;
-				Match(COLON);
 				State = 249;
+				labelName();
+				State = 250;
+				Match(COLON);
+				State = 251;
 				unit();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 251;
+				State = 253;
 				labelName();
-				State = 252;
+				State = 254;
 				Match(COLON);
 				}
 				break;
@@ -883,12 +848,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitInstruction(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitInstruction(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -899,24 +858,24 @@ public partial class KickAssemblerParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 257;
+			State = 259;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==COLON) {
 				{
-				State = 256;
+				State = 258;
 				Match(COLON);
 				}
 			}
 
-			State = 259;
-			fullOpcode();
 			State = 261;
+			fullOpcode();
+			State = 263;
 			ErrorHandler.Sync(this);
 			switch ( Interpreter.AdaptivePredict(TokenStream,5,Context) ) {
 			case 1:
 				{
-				State = 260;
+				State = 262;
 				argumentList();
 				}
 				break;
@@ -955,12 +914,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitScope(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitScope(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -970,11 +923,11 @@ public partial class KickAssemblerParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 263;
-			Match(OPEN_BRACE);
-			State = 264;
-			units();
 			State = 265;
+			Match(OPEN_BRACE);
+			State = 266;
+			units();
+			State = 267;
 			Match(CLOSE_BRACE);
 			}
 		}
@@ -1012,12 +965,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitNamedScope(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitNamedScope(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -1027,15 +974,15 @@ public partial class KickAssemblerParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 267;
-			Match(UNQUOTED_STRING);
-			State = 268;
-			Match(COLON);
 			State = 269;
-			Match(OPEN_BRACE);
+			Match(UNQUOTED_STRING);
 			State = 270;
-			units();
+			Match(COLON);
 			State = 271;
+			Match(OPEN_BRACE);
+			State = 272;
+			units();
+			State = 273;
 			Match(CLOSE_BRACE);
 			}
 		}
@@ -1076,12 +1023,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitArgumentList(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitArgumentList(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -1092,23 +1033,23 @@ public partial class KickAssemblerParser : Parser {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 273;
+			State = 275;
 			argument();
-			State = 278;
+			State = 280;
 			ErrorHandler.Sync(this);
 			_alt = Interpreter.AdaptivePredict(TokenStream,6,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 274;
+					State = 276;
 					Match(COMMA);
-					State = 275;
+					State = 277;
 					argument();
 					}
 					} 
 				}
-				State = 280;
+				State = 282;
 				ErrorHandler.Sync(this);
 				_alt = Interpreter.AdaptivePredict(TokenStream,6,Context);
 			}
@@ -1141,6 +1082,9 @@ public partial class KickAssemblerParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public NumericContext numeric() {
 			return GetRuleContext<NumericContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public VariableReferenceContext variableReference() {
+			return GetRuleContext<VariableReferenceContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OPEN_PARENS() { return GetToken(KickAssemblerParser.OPEN_PARENS, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ArgumentListContext argumentList() {
 			return GetRuleContext<ArgumentListContext>(0);
@@ -1170,12 +1114,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitArgument(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitArgument(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -1184,19 +1122,19 @@ public partial class KickAssemblerParser : Parser {
 		EnterRule(_localctx, 20, RULE_argument);
 		int _la;
 		try {
-			State = 303;
+			State = 308;
 			ErrorHandler.Sync(this);
 			switch ( Interpreter.AdaptivePredict(TokenStream,8,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 282;
+				State = 284;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				do {
 					{
 					{
-					State = 281;
+					State = 283;
 					_la = TokenStream.LA(1);
 					if ( !(_la==PLUS || _la==MINUS) ) {
 					ErrorHandler.RecoverInline(this);
@@ -1207,7 +1145,7 @@ public partial class KickAssemblerParser : Parser {
 					}
 					}
 					}
-					State = 284;
+					State = 286;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				} while ( _la==PLUS || _la==MINUS );
@@ -1216,73 +1154,144 @@ public partial class KickAssemblerParser : Parser {
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 286;
+				State = 288;
 				Match(HASH);
-				State = 287;
+				State = 289;
 				opcodeConstant();
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 288;
+				State = 290;
 				Match(HASH);
-				State = 289;
+				State = 291;
 				numeric();
 				}
 				break;
 			case 4:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 290;
-				Match(OPEN_PARENS);
-				State = 291;
-				argumentList();
 				State = 292;
-				Match(CLOSE_PARENS);
+				Match(HASH);
+				State = 293;
+				variableReference();
 				}
 				break;
 			case 5:
 				EnterOuterAlt(_localctx, 5);
 				{
 				State = 294;
-				Match(OPEN_BRACKET);
-				State = 295;
-				argumentList();
-				State = 296;
-				Match(CLOSE_BRACKET);
+				variableReference();
 				}
 				break;
 			case 6:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 298;
-				labelOffsetReference();
+				State = 295;
+				Match(OPEN_PARENS);
+				State = 296;
+				argumentList();
+				State = 297;
+				Match(CLOSE_PARENS);
 				}
 				break;
 			case 7:
 				EnterOuterAlt(_localctx, 7);
 				{
 				State = 299;
-				Match(STAR);
+				Match(OPEN_BRACKET);
 				State = 300;
-				expression(0);
+				argumentList();
+				State = 301;
+				Match(CLOSE_BRACKET);
 				}
 				break;
 			case 8:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 301;
-				expression(0);
+				State = 303;
+				labelOffsetReference();
 				}
 				break;
 			case 9:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 302;
+				State = 304;
+				Match(STAR);
+				State = 305;
+				expression(0);
+				}
+				break;
+			case 10:
+				EnterOuterAlt(_localctx, 10);
+				{
+				State = 306;
+				expression(0);
+				}
+				break;
+			case 11:
+				EnterOuterAlt(_localctx, 11);
+				{
+				State = 307;
 				Match(STAR);
 				}
 				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class VariableReferenceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode UNQUOTED_STRING() { return GetToken(KickAssemblerParser.UNQUOTED_STRING, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public LohibyteContext lohibyte() {
+			return GetRuleContext<LohibyteContext>(0);
+		}
+		public VariableReferenceContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_variableReference; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
+			if (typedListener != null) typedListener.EnterVariableReference(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
+			if (typedListener != null) typedListener.ExitVariableReference(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public VariableReferenceContext variableReference() {
+		VariableReferenceContext _localctx = new VariableReferenceContext(Context, State);
+		EnterRule(_localctx, 22, RULE_variableReference);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 311;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==LT || _la==GT) {
+				{
+				State = 310;
+				lohibyte();
+				}
+			}
+
+			State = 313;
+			Match(UNQUOTED_STRING);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1317,37 +1326,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitLabelOffsetReference(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitLabelOffsetReference(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public LabelOffsetReferenceContext labelOffsetReference() {
 		LabelOffsetReferenceContext _localctx = new LabelOffsetReferenceContext(Context, State);
-		EnterRule(_localctx, 22, RULE_labelOffsetReference);
+		EnterRule(_localctx, 24, RULE_labelOffsetReference);
 		try {
-			State = 311;
+			State = 321;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,9,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,10,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 305;
+				State = 315;
 				labelName();
-				State = 306;
+				State = 316;
 				Match(MINUS);
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 308;
+				State = 318;
 				labelName();
-				State = 309;
+				State = 319;
 				Match(PLUS);
 				}
 				break;
@@ -1426,12 +1429,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitExpression(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitExpression(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -1444,122 +1441,122 @@ public partial class KickAssemblerParser : Parser {
 		int _parentState = State;
 		ExpressionContext _localctx = new ExpressionContext(Context, _parentState);
 		ExpressionContext _prevctx = _localctx;
-		int _startState = 24;
-		EnterRecursionRule(_localctx, 24, RULE_expression, _p);
+		int _startState = 26;
+		EnterRecursionRule(_localctx, 26, RULE_expression, _p);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 334;
+			State = 344;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,10,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,11,Context) ) {
 			case 1:
 				{
-				State = 314;
+				State = 324;
 				Match(OPEN_PARENS);
-				State = 315;
+				State = 325;
 				expression(0);
-				State = 316;
+				State = 326;
 				Match(CLOSE_PARENS);
 				}
 				break;
 			case 2:
 				{
-				State = 318;
+				State = 328;
 				Match(OPEN_BRACKET);
-				State = 319;
+				State = 329;
 				expression(0);
-				State = 320;
+				State = 330;
 				Match(CLOSE_BRACKET);
 				}
 				break;
 			case 3:
 				{
-				State = 322;
+				State = 332;
 				Match(PLUS);
-				State = 323;
+				State = 333;
 				expression(12);
 				}
 				break;
 			case 4:
 				{
-				State = 324;
+				State = 334;
 				Match(MINUS);
-				State = 325;
+				State = 335;
 				expression(11);
 				}
 				break;
 			case 5:
 				{
-				State = 326;
+				State = 336;
 				classFunction();
 				}
 				break;
 			case 6:
 				{
-				State = 327;
+				State = 337;
 				function();
 				}
 				break;
 			case 7:
 				{
-				State = 328;
+				State = 338;
 				numeric();
 				}
 				break;
 			case 8:
 				{
-				State = 329;
+				State = 339;
 				opcodeConstant();
 				}
 				break;
 			case 9:
 				{
-				State = 330;
+				State = 340;
 				color();
 				}
 				break;
 			case 10:
 				{
-				State = 331;
+				State = 341;
 				boolean();
 				}
 				break;
 			case 11:
 				{
-				State = 332;
+				State = 342;
 				labelName();
 				}
 				break;
 			case 12:
 				{
-				State = 333;
+				State = 343;
 				Match(STRING);
 				}
 				break;
 			}
 			Context.Stop = TokenStream.LT(-1);
-			State = 368;
+			State = 378;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,12,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,13,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( ParseListeners!=null )
 						TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 366;
+					State = 376;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,11,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,12,Context) ) {
 					case 1:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 336;
+						State = 346;
 						if (!(Precpred(Context, 19))) throw new FailedPredicateException(this, "Precpred(Context, 19)");
-						State = 337;
+						State = 347;
 						binaryop();
-						State = 338;
+						State = 348;
 						expression(20);
 						}
 						break;
@@ -1567,11 +1564,11 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 340;
+						State = 350;
 						if (!(Precpred(Context, 18))) throw new FailedPredicateException(this, "Precpred(Context, 18)");
-						State = 341;
+						State = 351;
 						Match(STAR);
-						State = 342;
+						State = 352;
 						expression(19);
 						}
 						break;
@@ -1579,11 +1576,11 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 343;
+						State = 353;
 						if (!(Precpred(Context, 17))) throw new FailedPredicateException(this, "Precpred(Context, 17)");
-						State = 344;
+						State = 354;
 						Match(DIV);
-						State = 345;
+						State = 355;
 						expression(18);
 						}
 						break;
@@ -1591,11 +1588,11 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 346;
+						State = 356;
 						if (!(Precpred(Context, 16))) throw new FailedPredicateException(this, "Precpred(Context, 16)");
-						State = 347;
+						State = 357;
 						Match(PLUS);
-						State = 348;
+						State = 358;
 						expression(17);
 						}
 						break;
@@ -1603,11 +1600,11 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 349;
+						State = 359;
 						if (!(Precpred(Context, 15))) throw new FailedPredicateException(this, "Precpred(Context, 15)");
-						State = 350;
+						State = 360;
 						Match(MINUS);
-						State = 351;
+						State = 361;
 						expression(16);
 						}
 						break;
@@ -1615,11 +1612,11 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 352;
+						State = 362;
 						if (!(Precpred(Context, 10))) throw new FailedPredicateException(this, "Precpred(Context, 10)");
-						State = 353;
+						State = 363;
 						compareop();
-						State = 354;
+						State = 364;
 						expression(11);
 						}
 						break;
@@ -1627,15 +1624,15 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 356;
+						State = 366;
 						if (!(Precpred(Context, 9))) throw new FailedPredicateException(this, "Precpred(Context, 9)");
-						State = 357;
+						State = 367;
 						Match(INTERR);
-						State = 358;
+						State = 368;
 						expression(0);
-						State = 359;
+						State = 369;
 						Match(COLON);
-						State = 360;
+						State = 370;
 						expression(10);
 						}
 						break;
@@ -1643,9 +1640,9 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 362;
+						State = 372;
 						if (!(Precpred(Context, 14))) throw new FailedPredicateException(this, "Precpred(Context, 14)");
-						State = 363;
+						State = 373;
 						Match(OP_INC);
 						}
 						break;
@@ -1653,18 +1650,18 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 364;
+						State = 374;
 						if (!(Precpred(Context, 13))) throw new FailedPredicateException(this, "Precpred(Context, 13)");
-						State = 365;
+						State = 375;
 						Match(OP_DEC);
 						}
 						break;
 					}
 					} 
 				}
-				State = 370;
+				State = 380;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,12,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,13,Context);
 			}
 			}
 		}
@@ -1701,23 +1698,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitBinaryop(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitBinaryop(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public BinaryopContext binaryop() {
 		BinaryopContext _localctx = new BinaryopContext(Context, State);
-		EnterRule(_localctx, 26, RULE_binaryop);
+		EnterRule(_localctx, 28, RULE_binaryop);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 371;
+			State = 381;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 103)) & ~0x3f) == 0 && ((1L << (_la - 103)) & 1610612759L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -1761,26 +1752,20 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitAssignment_expression(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAssignment_expression(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public Assignment_expressionContext assignment_expression() {
 		Assignment_expressionContext _localctx = new Assignment_expressionContext(Context, State);
-		EnterRule(_localctx, 28, RULE_assignment_expression);
+		EnterRule(_localctx, 30, RULE_assignment_expression);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 373;
+			State = 383;
 			_localctx.name = Match(UNQUOTED_STRING);
-			State = 374;
+			State = 384;
 			Match(ASSIGNMENT);
-			State = 375;
+			State = 385;
 			expression(0);
 			}
 		}
@@ -1816,24 +1801,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitShorthand_assignment_expression(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitShorthand_assignment_expression(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public Shorthand_assignment_expressionContext shorthand_assignment_expression() {
 		Shorthand_assignment_expressionContext _localctx = new Shorthand_assignment_expressionContext(Context, State);
-		EnterRule(_localctx, 30, RULE_shorthand_assignment_expression);
+		EnterRule(_localctx, 32, RULE_shorthand_assignment_expression);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 377;
+			State = 387;
 			_localctx.name = Match(UNQUOTED_STRING);
-			State = 378;
+			State = 388;
 			unary_operator();
 			}
 		}
@@ -1875,73 +1854,67 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitUnary_operator(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitUnary_operator(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public Unary_operatorContext unary_operator() {
 		Unary_operatorContext _localctx = new Unary_operatorContext(Context, State);
-		EnterRule(_localctx, 32, RULE_unary_operator);
+		EnterRule(_localctx, 34, RULE_unary_operator);
 		try {
-			State = 392;
+			State = 402;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,13,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,14,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 380;
+				State = 390;
 				Match(PLUS);
-				State = 381;
+				State = 391;
 				Match(PLUS);
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 382;
+				State = 392;
 				Match(MINUS);
-				State = 383;
+				State = 393;
 				Match(MINUS);
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 384;
+				State = 394;
 				Match(PLUS);
-				State = 385;
+				State = 395;
 				Match(ASSIGNMENT);
 				}
 				break;
 			case 4:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 386;
+				State = 396;
 				Match(MINUS);
-				State = 387;
+				State = 397;
 				Match(ASSIGNMENT);
 				}
 				break;
 			case 5:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 388;
+				State = 398;
 				Match(STAR);
-				State = 389;
+				State = 399;
 				Match(ASSIGNMENT);
 				}
 				break;
 			case 6:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 390;
+				State = 400;
 				Match(DIV);
-				State = 391;
+				State = 401;
 				Match(ASSIGNMENT);
 				}
 				break;
@@ -1980,23 +1953,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitCompareop(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitCompareop(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public CompareopContext compareop() {
 		CompareopContext _localctx = new CompareopContext(Context, State);
-		EnterRule(_localctx, 34, RULE_compareop);
+		EnterRule(_localctx, 36, RULE_compareop);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 394;
+			State = 404;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 110)) & ~0x3f) == 0 && ((1L << (_la - 110)) & 15363L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2044,41 +2011,35 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitClassFunction(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitClassFunction(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ClassFunctionContext classFunction() {
 		ClassFunctionContext _localctx = new ClassFunctionContext(Context, State);
-		EnterRule(_localctx, 36, RULE_classFunction);
+		EnterRule(_localctx, 38, RULE_classFunction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 396;
+			State = 406;
 			Match(STRING);
-			State = 397;
+			State = 407;
 			Match(DOT);
-			State = 398;
+			State = 408;
 			Match(STRING);
-			State = 399;
+			State = 409;
 			Match(OPEN_PARENS);
-			State = 401;
+			State = 411;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==HASH || ((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 7288033640447L) != 0) || ((((_la - 137)) & ~0x3f) == 0 && ((1L << (_la - 137)) & 127L) != 0) || ((((_la - 208)) & ~0x3f) == 0 && ((1L << (_la - 208)) & -1L) != 0) || ((((_la - 272)) & ~0x3f) == 0 && ((1L << (_la - 272)) & -1L) != 0) || ((((_la - 336)) & ~0x3f) == 0 && ((1L << (_la - 336)) & -1L) != 0) || ((((_la - 400)) & ~0x3f) == 0 && ((1L << (_la - 400)) & -1L) != 0) || ((((_la - 464)) & ~0x3f) == 0 && ((1L << (_la - 464)) & 2199023255551L) != 0)) {
 				{
-				State = 400;
+				State = 410;
 				argumentList();
 				}
 			}
 
-			State = 403;
+			State = 413;
 			Match(CLOSE_PARENS);
 			}
 		}
@@ -2115,37 +2076,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFunction(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFunction(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FunctionContext function() {
 		FunctionContext _localctx = new FunctionContext(Context, State);
-		EnterRule(_localctx, 38, RULE_function);
+		EnterRule(_localctx, 40, RULE_function);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 405;
+			State = 415;
 			Match(UNQUOTED_STRING);
-			State = 406;
+			State = 416;
 			Match(OPEN_PARENS);
-			State = 408;
+			State = 418;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==HASH || ((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 7288033640447L) != 0) || ((((_la - 137)) & ~0x3f) == 0 && ((1L << (_la - 137)) & 127L) != 0) || ((((_la - 208)) & ~0x3f) == 0 && ((1L << (_la - 208)) & -1L) != 0) || ((((_la - 272)) & ~0x3f) == 0 && ((1L << (_la - 272)) & -1L) != 0) || ((((_la - 336)) & ~0x3f) == 0 && ((1L << (_la - 336)) & -1L) != 0) || ((((_la - 400)) & ~0x3f) == 0 && ((1L << (_la - 400)) & -1L) != 0) || ((((_la - 464)) & ~0x3f) == 0 && ((1L << (_la - 464)) & 2199023255551L) != 0)) {
 				{
-				State = 407;
+				State = 417;
 				argumentList();
 				}
 			}
 
-			State = 410;
+			State = 420;
 			Match(CLOSE_PARENS);
 			}
 		}
@@ -2179,22 +2134,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitCondition(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitCondition(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ConditionContext condition() {
 		ConditionContext _localctx = new ConditionContext(Context, State);
-		EnterRule(_localctx, 40, RULE_condition);
+		EnterRule(_localctx, 42, RULE_condition);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 412;
+			State = 422;
 			expression(0);
 			}
 		}
@@ -2318,222 +2267,216 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitCompiler_statement(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitCompiler_statement(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public Compiler_statementContext compiler_statement() {
 		Compiler_statementContext _localctx = new Compiler_statementContext(Context, State);
-		EnterRule(_localctx, 42, RULE_compiler_statement);
+		EnterRule(_localctx, 44, RULE_compiler_statement);
 		try {
-			State = 445;
+			State = 455;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case PRINT:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 414;
+				State = 424;
 				print();
 				}
 				break;
 			case PRINTNOW:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 415;
+				State = 425;
 				printnow();
 				}
 				break;
 			case DOTVAR:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 416;
+				State = 426;
 				var();
 				}
 				break;
 			case CONST:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 417;
+				State = 427;
 				@const();
 				}
 				break;
 			case IF:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 418;
+				State = 428;
 				@if();
 				}
 				break;
 			case ERRORIF:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 419;
+				State = 429;
 				errorif();
 				}
 				break;
 			case EVAL:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 420;
+				State = 430;
 				eval();
 				}
 				break;
 			case BREAK:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 421;
+				State = 431;
 				@break();
 				}
 				break;
 			case WATCH:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 422;
+				State = 432;
 				watch();
 				}
 				break;
 			case ENUM:
 				EnterOuterAlt(_localctx, 10);
 				{
-				State = 423;
+				State = 433;
 				@enum();
 				}
 				break;
 			case FOR:
 				EnterOuterAlt(_localctx, 11);
 				{
-				State = 424;
+				State = 434;
 				@for();
 				}
 				break;
 			case WHILE:
 				EnterOuterAlt(_localctx, 12);
 				{
-				State = 425;
+				State = 435;
 				@while();
 				}
 				break;
 			case STRUCT:
 				EnterOuterAlt(_localctx, 13);
 				{
-				State = 426;
+				State = 436;
 				@struct();
 				}
 				break;
 			case FUNCTION:
 				EnterOuterAlt(_localctx, 14);
 				{
-				State = 427;
+				State = 437;
 				functionDefine();
 				}
 				break;
 			case MACRO:
 				EnterOuterAlt(_localctx, 15);
 				{
-				State = 428;
+				State = 438;
 				macroDefine();
 				}
 				break;
 			case PSEUDOCOMMAND:
 				EnterOuterAlt(_localctx, 16);
 				{
-				State = 429;
+				State = 439;
 				pseudoCommandDefine();
 				}
 				break;
 			case NAMESPACE:
 				EnterOuterAlt(_localctx, 17);
 				{
-				State = 430;
+				State = 440;
 				@namespace();
 				}
 				break;
 			case LABEL:
 				EnterOuterAlt(_localctx, 18);
 				{
-				State = 431;
+				State = 441;
 				labelDirective();
 				}
 				break;
 			case SEGMENT:
 				EnterOuterAlt(_localctx, 19);
 				{
-				State = 432;
+				State = 442;
 				segment();
 				}
 				break;
 			case SEGMENTDEF:
 				EnterOuterAlt(_localctx, 20);
 				{
-				State = 433;
+				State = 443;
 				segmentDef();
 				}
 				break;
 			case SEGMENTOUT:
 				EnterOuterAlt(_localctx, 21);
 				{
-				State = 434;
+				State = 444;
 				segmentOut();
 				}
 				break;
 			case PLUGIN:
 				EnterOuterAlt(_localctx, 22);
 				{
-				State = 435;
+				State = 445;
 				plugin();
 				}
 				break;
 			case FILE:
 				EnterOuterAlt(_localctx, 23);
 				{
-				State = 436;
+				State = 446;
 				fileDirective();
 				}
 				break;
 			case DISK:
 				EnterOuterAlt(_localctx, 24);
 				{
-				State = 437;
+				State = 447;
 				diskDirective();
 				}
 				break;
 			case MODIFY:
 				EnterOuterAlt(_localctx, 25);
 				{
-				State = 438;
+				State = 448;
 				modify();
 				}
 				break;
 			case FILEMODIFY:
 				EnterOuterAlt(_localctx, 26);
 				{
-				State = 439;
+				State = 449;
 				fileModify();
 				}
 				break;
 			case RETURN:
 				EnterOuterAlt(_localctx, 27);
 				{
-				State = 440;
+				State = 450;
 				@return();
 				}
 				break;
 			case ASSERT:
 				EnterOuterAlt(_localctx, 28);
 				{
-				State = 441;
+				State = 451;
 				assert();
 				}
 				break;
 			case ASSERTERROR:
 				EnterOuterAlt(_localctx, 29);
 				{
-				State = 442;
+				State = 452;
 				assertError();
 				}
 				break;
@@ -2545,14 +2488,14 @@ public partial class KickAssemblerParser : Parser {
 			case CHAR:
 				EnterOuterAlt(_localctx, 30);
 				{
-				State = 443;
+				State = 453;
 				pseudopc();
 				}
 				break;
 			case ZP:
 				EnterOuterAlt(_localctx, 31);
 				{
-				State = 444;
+				State = 454;
 				zp();
 				}
 				break;
@@ -2591,24 +2534,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPrint(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPrint(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PrintContext print() {
 		PrintContext _localctx = new PrintContext(Context, State);
-		EnterRule(_localctx, 44, RULE_print);
+		EnterRule(_localctx, 46, RULE_print);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 447;
+			State = 457;
 			Match(PRINT);
-			State = 448;
+			State = 458;
 			expression(0);
 			}
 		}
@@ -2643,24 +2580,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPrintnow(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPrintnow(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PrintnowContext printnow() {
 		PrintnowContext _localctx = new PrintnowContext(Context, State);
-		EnterRule(_localctx, 46, RULE_printnow);
+		EnterRule(_localctx, 48, RULE_printnow);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 450;
+			State = 460;
 			Match(PRINTNOW);
-			State = 451;
+			State = 461;
 			expression(0);
 			}
 		}
@@ -2697,33 +2628,27 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitForInit(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitForInit(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ForInitContext forInit() {
 		ForInitContext _localctx = new ForInitContext(Context, State);
-		EnterRule(_localctx, 48, RULE_forInit);
+		EnterRule(_localctx, 50, RULE_forInit);
 		try {
-			State = 455;
+			State = 465;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case VAR:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 453;
+				State = 463;
 				forVar();
 				}
 				break;
 			case UNQUOTED_STRING:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 454;
+				State = 464;
 				assignment_expression();
 				}
 				break;
@@ -2762,24 +2687,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitForVar(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitForVar(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ForVarContext forVar() {
 		ForVarContext _localctx = new ForVarContext(Context, State);
-		EnterRule(_localctx, 50, RULE_forVar);
+		EnterRule(_localctx, 52, RULE_forVar);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 457;
+			State = 467;
 			Match(VAR);
-			State = 458;
+			State = 468;
 			assignment_expression();
 			}
 		}
@@ -2814,24 +2733,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitVar(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitVar(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public VarContext var() {
 		VarContext _localctx = new VarContext(Context, State);
-		EnterRule(_localctx, 52, RULE_var);
+		EnterRule(_localctx, 54, RULE_var);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 460;
+			State = 470;
 			Match(DOTVAR);
-			State = 461;
+			State = 471;
 			assignment_expression();
 			}
 		}
@@ -2866,24 +2779,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitConst(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitConst(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ConstContext @const() {
 		ConstContext _localctx = new ConstContext(Context, State);
-		EnterRule(_localctx, 54, RULE_const);
+		EnterRule(_localctx, 56, RULE_const);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 463;
+			State = 473;
 			Match(CONST);
-			State = 464;
+			State = 474;
 			assignment_expression();
 			}
 		}
@@ -2927,39 +2834,33 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitIf(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitIf(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public IfContext @if() {
 		IfContext _localctx = new IfContext(Context, State);
-		EnterRule(_localctx, 56, RULE_if);
+		EnterRule(_localctx, 58, RULE_if);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 466;
+			State = 476;
 			Match(IF);
-			State = 467;
+			State = 477;
 			Match(OPEN_PARENS);
-			State = 468;
+			State = 478;
 			expression(0);
-			State = 469;
+			State = 479;
 			Match(CLOSE_PARENS);
-			State = 470;
+			State = 480;
 			unit();
-			State = 473;
+			State = 483;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,18,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,19,Context) ) {
 			case 1:
 				{
-				State = 471;
+				State = 481;
 				Match(ELSE);
-				State = 472;
+				State = 482;
 				unit();
 				}
 				break;
@@ -3001,32 +2902,26 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitErrorif(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitErrorif(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ErrorifContext errorif() {
 		ErrorifContext _localctx = new ErrorifContext(Context, State);
-		EnterRule(_localctx, 58, RULE_errorif);
+		EnterRule(_localctx, 60, RULE_errorif);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 475;
+			State = 485;
 			Match(ERRORIF);
-			State = 476;
+			State = 486;
 			Match(OPEN_PARENS);
-			State = 477;
+			State = 487;
 			expression(0);
-			State = 478;
+			State = 488;
 			Match(CLOSE_PARENS);
-			State = 479;
+			State = 489;
 			Match(COMMA);
-			State = 480;
+			State = 490;
 			Match(STRING);
 			}
 		}
@@ -3061,24 +2956,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitEval(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEval(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public EvalContext eval() {
 		EvalContext _localctx = new EvalContext(Context, State);
-		EnterRule(_localctx, 60, RULE_eval);
+		EnterRule(_localctx, 62, RULE_eval);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 482;
+			State = 492;
 			Match(EVAL);
-			State = 483;
+			State = 493;
 			evalAssignment();
 			}
 		}
@@ -3115,33 +3004,27 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitEvalAssignment(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEvalAssignment(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public EvalAssignmentContext evalAssignment() {
 		EvalAssignmentContext _localctx = new EvalAssignmentContext(Context, State);
-		EnterRule(_localctx, 62, RULE_evalAssignment);
+		EnterRule(_localctx, 64, RULE_evalAssignment);
 		try {
-			State = 487;
+			State = 497;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,19,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,20,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 485;
+				State = 495;
 				assignment_expression();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 486;
+				State = 496;
 				shorthand_assignment_expression();
 				}
 				break;
@@ -3176,30 +3059,24 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitBreak(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitBreak(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public BreakContext @break() {
 		BreakContext _localctx = new BreakContext(Context, State);
-		EnterRule(_localctx, 64, RULE_break);
+		EnterRule(_localctx, 66, RULE_break);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 489;
+			State = 499;
 			Match(BREAK);
-			State = 491;
+			State = 501;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==STRING) {
 				{
-				State = 490;
+				State = 500;
 				Match(STRING);
 				}
 			}
@@ -3237,24 +3114,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitWatch(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitWatch(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public WatchContext watch() {
 		WatchContext _localctx = new WatchContext(Context, State);
-		EnterRule(_localctx, 66, RULE_watch);
+		EnterRule(_localctx, 68, RULE_watch);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 493;
+			State = 503;
 			Match(WATCH);
-			State = 494;
+			State = 504;
 			watchArguments();
 			}
 		}
@@ -3296,61 +3167,55 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitWatchArguments(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitWatchArguments(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public WatchArgumentsContext watchArguments() {
 		WatchArgumentsContext _localctx = new WatchArgumentsContext(Context, State);
-		EnterRule(_localctx, 68, RULE_watchArguments);
+		EnterRule(_localctx, 70, RULE_watchArguments);
 		int _la;
 		try {
-			State = 509;
+			State = 519;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,22,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,23,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 496;
+				State = 506;
 				expression(0);
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 497;
+				State = 507;
 				expression(0);
-				State = 498;
+				State = 508;
 				Match(COMMA);
-				State = 499;
+				State = 509;
 				expression(0);
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 501;
+				State = 511;
 				expression(0);
-				State = 502;
+				State = 512;
 				Match(COMMA);
-				State = 504;
+				State = 514;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if (((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 7285886156799L) != 0) || ((((_la - 137)) & ~0x3f) == 0 && ((1L << (_la - 137)) & 127L) != 0) || ((((_la - 208)) & ~0x3f) == 0 && ((1L << (_la - 208)) & -1L) != 0) || ((((_la - 272)) & ~0x3f) == 0 && ((1L << (_la - 272)) & -1L) != 0) || ((((_la - 336)) & ~0x3f) == 0 && ((1L << (_la - 336)) & -1L) != 0) || ((((_la - 400)) & ~0x3f) == 0 && ((1L << (_la - 400)) & -1L) != 0) || ((((_la - 464)) & ~0x3f) == 0 && ((1L << (_la - 464)) & 2199023255551L) != 0)) {
 					{
-					State = 503;
+					State = 513;
 					expression(0);
 					}
 				}
 
-				State = 506;
+				State = 516;
 				Match(COMMA);
-				State = 507;
+				State = 517;
 				Match(STRING);
 				}
 				break;
@@ -3389,37 +3254,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitEnum(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEnum(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public EnumContext @enum() {
 		EnumContext _localctx = new EnumContext(Context, State);
-		EnterRule(_localctx, 70, RULE_enum);
+		EnterRule(_localctx, 72, RULE_enum);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 511;
+			State = 521;
 			Match(ENUM);
-			State = 512;
+			State = 522;
 			Match(OPEN_BRACE);
-			State = 514;
+			State = 524;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==UNQUOTED_STRING) {
 				{
-				State = 513;
+				State = 523;
 				enumValues();
 				}
 			}
 
-			State = 516;
+			State = 526;
 			Match(CLOSE_BRACE);
 			}
 		}
@@ -3460,37 +3319,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitEnumValues(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEnumValues(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public EnumValuesContext enumValues() {
 		EnumValuesContext _localctx = new EnumValuesContext(Context, State);
-		EnterRule(_localctx, 72, RULE_enumValues);
+		EnterRule(_localctx, 74, RULE_enumValues);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 518;
+			State = 528;
 			enumValue();
-			State = 523;
+			State = 533;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				State = 519;
+				State = 529;
 				Match(COMMA);
-				State = 520;
+				State = 530;
 				enumValue();
 				}
 				}
-				State = 525;
+				State = 535;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -3528,32 +3381,26 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitEnumValue(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEnumValue(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public EnumValueContext enumValue() {
 		EnumValueContext _localctx = new EnumValueContext(Context, State);
-		EnterRule(_localctx, 74, RULE_enumValue);
+		EnterRule(_localctx, 76, RULE_enumValue);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 526;
+			State = 536;
 			Match(UNQUOTED_STRING);
-			State = 529;
+			State = 539;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==ASSIGNMENT) {
 				{
-				State = 527;
+				State = 537;
 				Match(ASSIGNMENT);
-				State = 528;
+				State = 538;
 				number();
 				}
 			}
@@ -3606,68 +3453,62 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFor(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFor(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ForContext @for() {
 		ForContext _localctx = new ForContext(Context, State);
-		EnterRule(_localctx, 76, RULE_for);
+		EnterRule(_localctx, 78, RULE_for);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 531;
+			State = 541;
 			Match(FOR);
-			State = 532;
+			State = 542;
 			Match(OPEN_PARENS);
-			State = 534;
+			State = 544;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==VAR || _la==UNQUOTED_STRING) {
 				{
-				State = 533;
+				State = 543;
 				forInit();
 				}
 			}
 
-			State = 536;
+			State = 546;
 			Match(SEMICOLON);
-			State = 538;
+			State = 548;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 7285886156799L) != 0) || ((((_la - 137)) & ~0x3f) == 0 && ((1L << (_la - 137)) & 127L) != 0) || ((((_la - 208)) & ~0x3f) == 0 && ((1L << (_la - 208)) & -1L) != 0) || ((((_la - 272)) & ~0x3f) == 0 && ((1L << (_la - 272)) & -1L) != 0) || ((((_la - 336)) & ~0x3f) == 0 && ((1L << (_la - 336)) & -1L) != 0) || ((((_la - 400)) & ~0x3f) == 0 && ((1L << (_la - 400)) & -1L) != 0) || ((((_la - 464)) & ~0x3f) == 0 && ((1L << (_la - 464)) & 2199023255551L) != 0)) {
 				{
-				State = 537;
+				State = 547;
 				condition();
 				}
 			}
 
-			State = 540;
+			State = 550;
 			Match(SEMICOLON);
-			State = 542;
+			State = 552;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 7285886156799L) != 0) || ((((_la - 137)) & ~0x3f) == 0 && ((1L << (_la - 137)) & 127L) != 0) || ((((_la - 208)) & ~0x3f) == 0 && ((1L << (_la - 208)) & -1L) != 0) || ((((_la - 272)) & ~0x3f) == 0 && ((1L << (_la - 272)) & -1L) != 0) || ((((_la - 336)) & ~0x3f) == 0 && ((1L << (_la - 336)) & -1L) != 0) || ((((_la - 400)) & ~0x3f) == 0 && ((1L << (_la - 400)) & -1L) != 0) || ((((_la - 464)) & ~0x3f) == 0 && ((1L << (_la - 464)) & 2199023255551L) != 0)) {
 				{
-				State = 541;
+				State = 551;
 				expression(0);
 				}
 			}
 
-			State = 544;
+			State = 554;
 			Match(CLOSE_PARENS);
-			State = 546;
+			State = 556;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,29,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,30,Context) ) {
 			case 1:
 				{
-				State = 545;
+				State = 555;
 				unit();
 				}
 				break;
@@ -3710,30 +3551,24 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitWhile(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitWhile(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public WhileContext @while() {
 		WhileContext _localctx = new WhileContext(Context, State);
-		EnterRule(_localctx, 78, RULE_while);
+		EnterRule(_localctx, 80, RULE_while);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 548;
+			State = 558;
 			Match(WHILE);
-			State = 549;
+			State = 559;
 			Match(OPEN_PARENS);
-			State = 550;
+			State = 560;
 			condition();
-			State = 551;
+			State = 561;
 			Match(CLOSE_PARENS);
-			State = 552;
+			State = 562;
 			unit();
 			}
 		}
@@ -3771,30 +3606,24 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitStruct(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitStruct(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public StructContext @struct() {
 		StructContext _localctx = new StructContext(Context, State);
-		EnterRule(_localctx, 80, RULE_struct);
+		EnterRule(_localctx, 82, RULE_struct);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 554;
+			State = 564;
 			Match(STRUCT);
-			State = 555;
+			State = 565;
 			Match(UNQUOTED_STRING);
-			State = 556;
+			State = 566;
 			Match(OPEN_BRACE);
-			State = 557;
+			State = 567;
 			variableList();
-			State = 558;
+			State = 568;
 			Match(CLOSE_BRACE);
 			}
 		}
@@ -3835,41 +3664,35 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitVariableList(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitVariableList(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public VariableListContext variableList() {
 		VariableListContext _localctx = new VariableListContext(Context, State);
-		EnterRule(_localctx, 82, RULE_variableList);
+		EnterRule(_localctx, 84, RULE_variableList);
 		int _la;
 		try {
-			State = 569;
+			State = 579;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case UNQUOTED_STRING:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 560;
+				State = 570;
 				variable();
-				State = 565;
+				State = 575;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				while (_la==COMMA) {
 					{
 					{
-					State = 561;
+					State = 571;
 					Match(COMMA);
-					State = 562;
+					State = 572;
 					variable();
 					}
 					}
-					State = 567;
+					State = 577;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
@@ -3913,22 +3736,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitVariable(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitVariable(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public VariableContext variable() {
 		VariableContext _localctx = new VariableContext(Context, State);
-		EnterRule(_localctx, 84, RULE_variable);
+		EnterRule(_localctx, 86, RULE_variable);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 571;
+			State = 581;
 			Match(UNQUOTED_STRING);
 			}
 		}
@@ -3971,32 +3788,26 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFunctionDefine(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFunctionDefine(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FunctionDefineContext functionDefine() {
 		FunctionDefineContext _localctx = new FunctionDefineContext(Context, State);
-		EnterRule(_localctx, 86, RULE_functionDefine);
+		EnterRule(_localctx, 88, RULE_functionDefine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 573;
+			State = 583;
 			Match(FUNCTION);
-			State = 574;
+			State = 584;
 			atName();
-			State = 575;
+			State = 585;
 			Match(OPEN_PARENS);
-			State = 576;
+			State = 586;
 			variableList();
-			State = 577;
+			State = 587;
 			Match(CLOSE_PARENS);
-			State = 578;
+			State = 588;
 			scope();
 			}
 		}
@@ -4031,24 +3842,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitReturn(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitReturn(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ReturnContext @return() {
 		ReturnContext _localctx = new ReturnContext(Context, State);
-		EnterRule(_localctx, 88, RULE_return);
+		EnterRule(_localctx, 90, RULE_return);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 580;
+			State = 590;
 			Match(RETURN);
-			State = 581;
+			State = 591;
 			expression(0);
 			}
 		}
@@ -4091,32 +3896,26 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitMacroDefine(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitMacroDefine(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public MacroDefineContext macroDefine() {
 		MacroDefineContext _localctx = new MacroDefineContext(Context, State);
-		EnterRule(_localctx, 90, RULE_macroDefine);
+		EnterRule(_localctx, 92, RULE_macroDefine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 583;
+			State = 593;
 			Match(MACRO);
-			State = 584;
+			State = 594;
 			atName();
-			State = 585;
+			State = 595;
 			Match(OPEN_PARENS);
-			State = 586;
+			State = 596;
 			variableList();
-			State = 587;
+			State = 597;
 			Match(CLOSE_PARENS);
-			State = 588;
+			State = 598;
 			scope();
 			}
 		}
@@ -4152,26 +3951,20 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPseudoCommandDefine(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPseudoCommandDefine(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PseudoCommandDefineContext pseudoCommandDefine() {
 		PseudoCommandDefineContext _localctx = new PseudoCommandDefineContext(Context, State);
-		EnterRule(_localctx, 92, RULE_pseudoCommandDefine);
+		EnterRule(_localctx, 94, RULE_pseudoCommandDefine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 590;
+			State = 600;
 			Match(PSEUDOCOMMAND);
-			State = 591;
+			State = 601;
 			Match(UNQUOTED_STRING);
-			State = 592;
+			State = 602;
 			pseudoCommandDefineArguments();
 			}
 		}
@@ -4210,41 +4003,35 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPseudoCommandDefineArguments(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPseudoCommandDefineArguments(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PseudoCommandDefineArgumentsContext pseudoCommandDefineArguments() {
 		PseudoCommandDefineArgumentsContext _localctx = new PseudoCommandDefineArgumentsContext(Context, State);
-		EnterRule(_localctx, 94, RULE_pseudoCommandDefineArguments);
+		EnterRule(_localctx, 96, RULE_pseudoCommandDefineArguments);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 594;
+			State = 604;
 			Match(UNQUOTED_STRING);
-			State = 599;
+			State = 609;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,32,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,33,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 595;
+					State = 605;
 					Match(COLON);
-					State = 596;
+					State = 606;
 					Match(UNQUOTED_STRING);
 					}
 					} 
 				}
-				State = 601;
+				State = 611;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,32,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,33,Context);
 			}
 			}
 		}
@@ -4280,31 +4067,25 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitNamespace(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitNamespace(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public NamespaceContext @namespace() {
 		NamespaceContext _localctx = new NamespaceContext(Context, State);
-		EnterRule(_localctx, 96, RULE_namespace);
+		EnterRule(_localctx, 98, RULE_namespace);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 602;
+			State = 612;
 			Match(NAMESPACE);
-			State = 603;
+			State = 613;
 			Match(UNQUOTED_STRING);
-			State = 605;
+			State = 615;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,33,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,34,Context) ) {
 			case 1:
 				{
-				State = 604;
+				State = 614;
 				scope();
 				}
 				break;
@@ -4345,26 +4126,20 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitLabelDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitLabelDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public LabelDirectiveContext labelDirective() {
 		LabelDirectiveContext _localctx = new LabelDirectiveContext(Context, State);
-		EnterRule(_localctx, 98, RULE_labelDirective);
+		EnterRule(_localctx, 100, RULE_labelDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 607;
+			State = 617;
 			Match(LABEL);
-			State = 608;
+			State = 618;
 			assignment_expression();
-			State = 609;
+			State = 619;
 			scope();
 			}
 		}
@@ -4397,24 +4172,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPlugin(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPlugin(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PluginContext plugin() {
 		PluginContext _localctx = new PluginContext(Context, State);
-		EnterRule(_localctx, 100, RULE_plugin);
+		EnterRule(_localctx, 102, RULE_plugin);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 611;
+			State = 621;
 			Match(PLUGIN);
-			State = 612;
+			State = 622;
 			Match(STRING);
 			}
 		}
@@ -4452,50 +4221,44 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitSegment(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitSegment(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public SegmentContext segment() {
 		SegmentContext _localctx = new SegmentContext(Context, State);
-		EnterRule(_localctx, 102, RULE_segment);
+		EnterRule(_localctx, 104, RULE_segment);
 		try {
-			State = 622;
+			State = 632;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,34,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,35,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 614;
+				State = 624;
 				Match(SEGMENT);
-				State = 615;
+				State = 625;
 				_localctx.name = Match(UNQUOTED_STRING);
-				State = 616;
+				State = 626;
 				parameterMap();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 617;
+				State = 627;
 				Match(SEGMENT);
-				State = 618;
+				State = 628;
 				_localctx.name = Match(UNQUOTED_STRING);
-				State = 619;
+				State = 629;
 				Match(STRING);
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 620;
+				State = 630;
 				Match(SEGMENT);
-				State = 621;
+				State = 631;
 				_localctx.name = Match(UNQUOTED_STRING);
 				}
 				break;
@@ -4534,26 +4297,20 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitSegmentDef(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitSegmentDef(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public SegmentDefContext segmentDef() {
 		SegmentDefContext _localctx = new SegmentDefContext(Context, State);
-		EnterRule(_localctx, 104, RULE_segmentDef);
+		EnterRule(_localctx, 106, RULE_segmentDef);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 624;
+			State = 634;
 			Match(SEGMENTDEF);
-			State = 625;
+			State = 635;
 			_localctx.Name = Match(UNQUOTED_STRING);
-			State = 626;
+			State = 636;
 			parameterMap();
 			}
 		}
@@ -4589,26 +4346,20 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitSegmentOut(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitSegmentOut(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public SegmentOutContext segmentOut() {
 		SegmentOutContext _localctx = new SegmentOutContext(Context, State);
-		EnterRule(_localctx, 106, RULE_segmentOut);
+		EnterRule(_localctx, 108, RULE_segmentOut);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 628;
+			State = 638;
 			Match(SEGMENTOUT);
-			State = 629;
+			State = 639;
 			Match(UNQUOTED_STRING);
-			State = 630;
+			State = 640;
 			parameterMap();
 			}
 		}
@@ -4643,24 +4394,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFileDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFileDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FileDirectiveContext fileDirective() {
 		FileDirectiveContext _localctx = new FileDirectiveContext(Context, State);
-		EnterRule(_localctx, 108, RULE_fileDirective);
+		EnterRule(_localctx, 110, RULE_fileDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 632;
+			State = 642;
 			Match(FILE);
-			State = 633;
+			State = 643;
 			parameterMap();
 			}
 		}
@@ -4701,41 +4446,35 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitDiskDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitDiskDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public DiskDirectiveContext diskDirective() {
 		DiskDirectiveContext _localctx = new DiskDirectiveContext(Context, State);
-		EnterRule(_localctx, 110, RULE_diskDirective);
+		EnterRule(_localctx, 112, RULE_diskDirective);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 635;
+			State = 645;
 			Match(DISK);
-			State = 637;
+			State = 647;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==UNQUOTED_STRING) {
 				{
-				State = 636;
+				State = 646;
 				Match(UNQUOTED_STRING);
 				}
 			}
 
-			State = 639;
+			State = 649;
 			parameterMap();
-			State = 640;
+			State = 650;
 			Match(OPEN_BRACE);
-			State = 641;
+			State = 651;
 			diskDirectiveContent();
-			State = 642;
+			State = 652;
 			Match(CLOSE_BRACE);
 			}
 		}
@@ -4776,37 +4515,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitDiskDirectiveContent(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitDiskDirectiveContent(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public DiskDirectiveContentContext diskDirectiveContent() {
 		DiskDirectiveContentContext _localctx = new DiskDirectiveContentContext(Context, State);
-		EnterRule(_localctx, 112, RULE_diskDirectiveContent);
+		EnterRule(_localctx, 114, RULE_diskDirectiveContent);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 644;
+			State = 654;
 			parameterMap();
-			State = 649;
+			State = 659;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				State = 645;
+				State = 655;
 				Match(COMMA);
-				State = 646;
+				State = 656;
 				parameterMap();
 				}
 				}
-				State = 651;
+				State = 661;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -4847,39 +4580,33 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitParameterMap(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitParameterMap(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ParameterMapContext parameterMap() {
 		ParameterMapContext _localctx = new ParameterMapContext(Context, State);
-		EnterRule(_localctx, 114, RULE_parameterMap);
+		EnterRule(_localctx, 116, RULE_parameterMap);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 652;
+			State = 662;
 			Match(OPEN_BRACKET);
-			State = 656;
+			State = 666;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==UNQUOTED_STRING) {
 				{
 				{
-				State = 653;
+				State = 663;
 				parameterMapItems();
 				}
 				}
-				State = 658;
+				State = 668;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 659;
+			State = 669;
 			Match(CLOSE_BRACKET);
 			}
 		}
@@ -4920,37 +4647,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitParameterMapItems(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitParameterMapItems(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ParameterMapItemsContext parameterMapItems() {
 		ParameterMapItemsContext _localctx = new ParameterMapItemsContext(Context, State);
-		EnterRule(_localctx, 116, RULE_parameterMapItems);
+		EnterRule(_localctx, 118, RULE_parameterMapItems);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 661;
+			State = 671;
 			parameterMapItem();
-			State = 666;
+			State = 676;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				State = 662;
+				State = 672;
 				Match(COMMA);
-				State = 663;
+				State = 673;
 				parameterMapItem();
 				}
 				}
-				State = 668;
+				State = 678;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -4992,46 +4713,40 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitParameterMapItem(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitParameterMapItem(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ParameterMapItemContext parameterMapItem() {
 		ParameterMapItemContext _localctx = new ParameterMapItemContext(Context, State);
-		EnterRule(_localctx, 118, RULE_parameterMapItem);
+		EnterRule(_localctx, 120, RULE_parameterMapItem);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 669;
+			State = 679;
 			Match(UNQUOTED_STRING);
-			State = 670;
+			State = 680;
 			Match(ASSIGNMENT);
-			State = 674;
+			State = 684;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case DEC_NUMBER:
 			case HEX_NUMBER:
 			case BIN_NUMBER:
 				{
-				State = 671;
+				State = 681;
 				number();
 				}
 				break;
 			case STRING:
 				{
-				State = 672;
+				State = 682;
 				Match(STRING);
 				}
 				break;
 			case TRUE:
 			case FALSE:
 				{
-				State = 673;
+				State = 683;
 				boolean();
 				}
 				break;
@@ -5074,30 +4789,24 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitModify(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitModify(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ModifyContext modify() {
 		ModifyContext _localctx = new ModifyContext(Context, State);
-		EnterRule(_localctx, 120, RULE_modify);
+		EnterRule(_localctx, 122, RULE_modify);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 676;
+			State = 686;
 			Match(MODIFY);
-			State = 677;
+			State = 687;
 			Match(UNQUOTED_STRING);
-			State = 678;
+			State = 688;
 			Match(OPEN_PARENS);
-			State = 679;
+			State = 689;
 			Match(CLOSE_PARENS);
-			State = 680;
+			State = 690;
 			scope();
 			}
 		}
@@ -5135,30 +4844,24 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFileModify(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFileModify(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FileModifyContext fileModify() {
 		FileModifyContext _localctx = new FileModifyContext(Context, State);
-		EnterRule(_localctx, 122, RULE_fileModify);
+		EnterRule(_localctx, 124, RULE_fileModify);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 682;
+			State = 692;
 			Match(FILEMODIFY);
-			State = 683;
+			State = 693;
 			Match(UNQUOTED_STRING);
-			State = 684;
+			State = 694;
 			Match(OPEN_PARENS);
-			State = 685;
+			State = 695;
 			argument();
-			State = 686;
+			State = 696;
 			Match(CLOSE_PARENS);
 			}
 		}
@@ -5198,30 +4901,24 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitAssert(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAssert(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public AssertContext assert() {
 		AssertContext _localctx = new AssertContext(Context, State);
-		EnterRule(_localctx, 124, RULE_assert);
+		EnterRule(_localctx, 126, RULE_assert);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 688;
+			State = 698;
 			Match(ASSERT);
-			State = 689;
+			State = 699;
 			Match(STRING);
-			State = 690;
+			State = 700;
 			unit();
-			State = 691;
+			State = 701;
 			Match(COMMA);
-			State = 692;
+			State = 702;
 			unit();
 			}
 		}
@@ -5257,26 +4954,20 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitAssertError(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAssertError(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public AssertErrorContext assertError() {
 		AssertErrorContext _localctx = new AssertErrorContext(Context, State);
-		EnterRule(_localctx, 126, RULE_assertError);
+		EnterRule(_localctx, 128, RULE_assertError);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 694;
+			State = 704;
 			Match(ASSERTERROR);
-			State = 695;
+			State = 705;
 			Match(STRING);
-			State = 696;
+			State = 706;
 			unit();
 			}
 		}
@@ -5313,24 +5004,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPseudopc(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPseudopc(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PseudopcContext pseudopc() {
 		PseudopcContext _localctx = new PseudopcContext(Context, State);
-		EnterRule(_localctx, 128, RULE_pseudopc);
+		EnterRule(_localctx, 130, RULE_pseudopc);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 698;
+			State = 708;
 			numeric();
-			State = 699;
+			State = 709;
 			scope();
 			}
 		}
@@ -5367,28 +5052,22 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitZp(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitZp(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ZpContext zp() {
 		ZpContext _localctx = new ZpContext(Context, State);
-		EnterRule(_localctx, 130, RULE_zp);
+		EnterRule(_localctx, 132, RULE_zp);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 701;
+			State = 711;
 			Match(ZP);
-			State = 702;
+			State = 712;
 			Match(OPEN_BRACE);
-			State = 703;
+			State = 713;
 			zpArgumentList();
-			State = 704;
+			State = 714;
 			Match(CLOSE_BRACE);
 			}
 		}
@@ -5425,35 +5104,29 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitZpArgumentList(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitZpArgumentList(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ZpArgumentListContext zpArgumentList() {
 		ZpArgumentListContext _localctx = new ZpArgumentListContext(Context, State);
-		EnterRule(_localctx, 132, RULE_zpArgumentList);
+		EnterRule(_localctx, 134, RULE_zpArgumentList);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 706;
+			State = 716;
 			zpArgument();
-			State = 710;
+			State = 720;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==AT || _la==UNQUOTED_STRING) {
 				{
 				{
-				State = 707;
+				State = 717;
 				zpArgument();
 				}
 				}
-				State = 712;
+				State = 722;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -5492,28 +5165,22 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitZpArgument(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitZpArgument(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ZpArgumentContext zpArgument() {
 		ZpArgumentContext _localctx = new ZpArgumentContext(Context, State);
-		EnterRule(_localctx, 134, RULE_zpArgument);
+		EnterRule(_localctx, 136, RULE_zpArgument);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 713;
+			State = 723;
 			atName();
-			State = 714;
+			State = 724;
 			Match(COLON);
-			State = 715;
+			State = 725;
 			Match(DOTBYTE);
-			State = 716;
+			State = 726;
 			Match(DEC_NUMBER);
 			}
 		}
@@ -5545,22 +5212,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFileName(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFileName(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FileNameContext fileName() {
 		FileNameContext _localctx = new FileNameContext(Context, State);
-		EnterRule(_localctx, 136, RULE_fileName);
+		EnterRule(_localctx, 138, RULE_fileName);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 718;
+			State = 728;
 			Match(UNQUOTED_STRING);
 			}
 		}
@@ -5609,57 +5270,51 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorDirectiveContext preprocessorDirective() {
 		PreprocessorDirectiveContext _localctx = new PreprocessorDirectiveContext(Context, State);
-		EnterRule(_localctx, 138, RULE_preprocessorDirective);
+		EnterRule(_localctx, 140, RULE_preprocessorDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 726;
+			State = 736;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case HASHDEFINE:
 				{
-				State = 720;
+				State = 730;
 				preprocessorDefine();
 				}
 				break;
 			case HASHUNDEF:
 				{
-				State = 721;
+				State = 731;
 				preprocessorUndef();
 				}
 				break;
 			case HASHIMPORT:
 				{
-				State = 722;
+				State = 732;
 				preprocessorImport();
 				}
 				break;
 			case HASHIMPORTIF:
 				{
-				State = 723;
+				State = 733;
 				preprocessorImportIf();
 				}
 				break;
 			case HASHIMPORTONCE:
 				{
-				State = 724;
+				State = 734;
 				preprocessorImportOnce();
 				}
 				break;
 			case HASHIF:
 				{
-				State = 725;
+				State = 735;
 				preprocessorIf();
 				}
 				break;
@@ -5697,24 +5352,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorDefine(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorDefine(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorDefineContext preprocessorDefine() {
 		PreprocessorDefineContext _localctx = new PreprocessorDefineContext(Context, State);
-		EnterRule(_localctx, 140, RULE_preprocessorDefine);
+		EnterRule(_localctx, 142, RULE_preprocessorDefine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 728;
+			State = 738;
 			Match(HASHDEFINE);
-			State = 729;
+			State = 739;
 			Match(DEFINED_TOKEN);
 			}
 		}
@@ -5747,24 +5396,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorUndef(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorUndef(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorUndefContext preprocessorUndef() {
 		PreprocessorUndefContext _localctx = new PreprocessorUndefContext(Context, State);
-		EnterRule(_localctx, 142, RULE_preprocessorUndef);
+		EnterRule(_localctx, 144, RULE_preprocessorUndef);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 731;
+			State = 741;
 			Match(HASHUNDEF);
-			State = 732;
+			State = 742;
 			Match(UNDEFINED_TOKEN);
 			}
 		}
@@ -5798,24 +5441,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorImport(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorImport(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorImportContext preprocessorImport() {
 		PreprocessorImportContext _localctx = new PreprocessorImportContext(Context, State);
-		EnterRule(_localctx, 144, RULE_preprocessorImport);
+		EnterRule(_localctx, 146, RULE_preprocessorImport);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 734;
+			State = 744;
 			Match(HASHIMPORT);
-			State = 735;
+			State = 745;
 			_localctx.fileReference = Match(STRING);
 			}
 		}
@@ -5850,26 +5487,20 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorImportIf(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorImportIf(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorImportIfContext preprocessorImportIf() {
 		PreprocessorImportIfContext _localctx = new PreprocessorImportIfContext(Context, State);
-		EnterRule(_localctx, 146, RULE_preprocessorImportIf);
+		EnterRule(_localctx, 148, RULE_preprocessorImportIf);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 737;
+			State = 747;
 			Match(HASHIMPORTIF);
-			State = 738;
+			State = 748;
 			Match(IIF_CONDITION);
-			State = 739;
+			State = 749;
 			_localctx.fileReference = Match(STRING);
 			}
 		}
@@ -5903,24 +5534,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorImportOnce(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorImportOnce(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorImportOnceContext preprocessorImportOnce() {
 		PreprocessorImportOnceContext _localctx = new PreprocessorImportOnceContext(Context, State);
-		EnterRule(_localctx, 148, RULE_preprocessorImportOnce);
+		EnterRule(_localctx, 150, RULE_preprocessorImportOnce);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 741;
+			State = 751;
 			Match(HASHIMPORTONCE);
-			State = 742;
+			State = 752;
 			_localctx.fileReference = Match(STRING);
 			}
 		}
@@ -5968,59 +5593,53 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorIf(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorIf(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorIfContext preprocessorIf() {
 		PreprocessorIfContext _localctx = new PreprocessorIfContext(Context, State);
-		EnterRule(_localctx, 150, RULE_preprocessorIf);
+		EnterRule(_localctx, 152, RULE_preprocessorIf);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 744;
+			State = 754;
 			Match(HASHIF);
-			State = 745;
+			State = 755;
 			Match(IF_CONDITION);
-			State = 746;
+			State = 756;
 			preprocessorBlock();
-			State = 752;
+			State = 762;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==HASHELIF) {
 				{
 				{
-				State = 747;
+				State = 757;
 				Match(HASHELIF);
-				State = 748;
+				State = 758;
 				Match(IF_CONDITION);
-				State = 749;
+				State = 759;
 				preprocessorBlock();
 				}
 				}
-				State = 754;
+				State = 764;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 757;
+			State = 767;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==HASHELSE) {
 				{
-				State = 755;
+				State = 765;
 				Match(HASHELSE);
-				State = 756;
+				State = 766;
 				preprocessorBlock();
 				}
 			}
 
-			State = 759;
+			State = 769;
 			Match(HASHENDIF);
 			}
 		}
@@ -6060,20 +5679,14 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorBlock(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorBlock(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public PreprocessorBlockContext preprocessorBlock() {
 		PreprocessorBlockContext _localctx = new PreprocessorBlockContext(Context, State);
-		EnterRule(_localctx, 152, RULE_preprocessorBlock);
+		EnterRule(_localctx, 154, RULE_preprocessorBlock);
 		try {
-			State = 766;
+			State = 776;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case HASHDEFINE:
@@ -6199,11 +5812,11 @@ public partial class KickAssemblerParser : Parser {
 			case DOT_UNQUOTED_STRING:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 761;
+				State = 771;
 				eol();
-				State = 762;
+				State = 772;
 				unit();
-				State = 763;
+				State = 773;
 				eol();
 				}
 				break;
@@ -6212,7 +5825,7 @@ public partial class KickAssemblerParser : Parser {
 			case HASHELIF:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 765;
+				State = 775;
 				eol();
 				}
 				break;
@@ -6261,12 +5874,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitPreprocessorCondition(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitPreprocessorCondition(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -6279,36 +5886,36 @@ public partial class KickAssemblerParser : Parser {
 		int _parentState = State;
 		PreprocessorConditionContext _localctx = new PreprocessorConditionContext(Context, _parentState);
 		PreprocessorConditionContext _prevctx = _localctx;
-		int _startState = 154;
-		EnterRecursionRule(_localctx, 154, RULE_preprocessorCondition, _p);
+		int _startState = 156;
+		EnterRecursionRule(_localctx, 156, RULE_preprocessorCondition, _p);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 776;
+			State = 786;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case OPEN_PARENS:
 				{
-				State = 769;
+				State = 779;
 				Match(OPEN_PARENS);
-				State = 770;
+				State = 780;
 				preprocessorCondition(0);
-				State = 771;
+				State = 781;
 				Match(CLOSE_PARENS);
 				}
 				break;
 			case BANG:
 				{
-				State = 773;
+				State = 783;
 				Match(BANG);
-				State = 774;
+				State = 784;
 				preprocessorCondition(6);
 				}
 				break;
 			case UNQUOTED_STRING:
 				{
-				State = 775;
+				State = 785;
 				Match(UNQUOTED_STRING);
 				}
 				break;
@@ -6316,27 +5923,27 @@ public partial class KickAssemblerParser : Parser {
 				throw new NoViableAltException(this);
 			}
 			Context.Stop = TokenStream.LT(-1);
-			State = 792;
+			State = 802;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,47,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,48,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( ParseListeners!=null )
 						TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 790;
+					State = 800;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,46,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,47,Context) ) {
 					case 1:
 						{
 						_localctx = new PreprocessorConditionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_preprocessorCondition);
-						State = 778;
+						State = 788;
 						if (!(Precpred(Context, 5))) throw new FailedPredicateException(this, "Precpred(Context, 5)");
-						State = 779;
+						State = 789;
 						Match(OP_AND);
-						State = 780;
+						State = 790;
 						preprocessorCondition(6);
 						}
 						break;
@@ -6344,11 +5951,11 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new PreprocessorConditionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_preprocessorCondition);
-						State = 781;
+						State = 791;
 						if (!(Precpred(Context, 4))) throw new FailedPredicateException(this, "Precpred(Context, 4)");
-						State = 782;
+						State = 792;
 						Match(OP_OR);
-						State = 783;
+						State = 793;
 						preprocessorCondition(5);
 						}
 						break;
@@ -6356,11 +5963,11 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new PreprocessorConditionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_preprocessorCondition);
-						State = 784;
+						State = 794;
 						if (!(Precpred(Context, 3))) throw new FailedPredicateException(this, "Precpred(Context, 3)");
-						State = 785;
+						State = 795;
 						Match(OP_EQ);
-						State = 786;
+						State = 796;
 						preprocessorCondition(4);
 						}
 						break;
@@ -6368,20 +5975,20 @@ public partial class KickAssemblerParser : Parser {
 						{
 						_localctx = new PreprocessorConditionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_preprocessorCondition);
-						State = 787;
+						State = 797;
 						if (!(Precpred(Context, 2))) throw new FailedPredicateException(this, "Precpred(Context, 2)");
-						State = 788;
+						State = 798;
 						Match(OP_NE);
-						State = 789;
+						State = 799;
 						preprocessorCondition(3);
 						}
 						break;
 					}
 					} 
 				}
-				State = 794;
+				State = 804;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,47,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,48,Context);
 			}
 			}
 		}
@@ -6439,54 +6046,48 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public DirectiveContext directive() {
 		DirectiveContext _localctx = new DirectiveContext(Context, State);
-		EnterRule(_localctx, 156, RULE_directive);
+		EnterRule(_localctx, 158, RULE_directive);
 		try {
-			State = 804;
+			State = 814;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case DOTCPU:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 795;
+				State = 805;
 				cpuDirective();
 				}
 				break;
 			case DOTBYTE:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 796;
+				State = 806;
 				byteDirective();
 				}
 				break;
 			case DOTWORD:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 797;
+				State = 807;
 				wordDirective();
 				}
 				break;
 			case DOTDWORD:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 798;
+				State = 808;
 				dwordDirective();
 				}
 				break;
 			case DOTTEXT:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 799;
+				State = 809;
 				textDirective();
 				}
 				break;
@@ -6495,21 +6096,21 @@ public partial class KickAssemblerParser : Parser {
 			case DOTLOHIFILL:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 800;
+				State = 810;
 				fillDirective();
 				}
 				break;
 			case DOTENCODING:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 801;
+				State = 811;
 				encodingDirective();
 				}
 				break;
 			case DOTIMPORT:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 802;
+				State = 812;
 				importDataDirective();
 				}
 				break;
@@ -6517,7 +6118,7 @@ public partial class KickAssemblerParser : Parser {
 			case OP_MULT_ASSIGNMENT:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 803;
+				State = 813;
 				memoryDirective();
 				}
 				break;
@@ -6559,23 +6160,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitMemoryDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitMemoryDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public MemoryDirectiveContext memoryDirective() {
 		MemoryDirectiveContext _localctx = new MemoryDirectiveContext(Context, State);
-		EnterRule(_localctx, 158, RULE_memoryDirective);
+		EnterRule(_localctx, 160, RULE_memoryDirective);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 806;
+			State = 816;
 			_la = TokenStream.LA(1);
 			if ( !(_la==PC || _la==OP_MULT_ASSIGNMENT) ) {
 			ErrorHandler.RecoverInline(this);
@@ -6584,24 +6179,24 @@ public partial class KickAssemblerParser : Parser {
 				ErrorHandler.ReportMatch(this);
 			    Consume();
 			}
-			State = 807;
+			State = 817;
 			number();
-			State = 809;
+			State = 819;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==STRING) {
 				{
-				State = 808;
+				State = 818;
 				Match(STRING);
 				}
 			}
 
-			State = 812;
+			State = 822;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,50,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,51,Context) ) {
 			case 1:
 				{
-				State = 811;
+				State = 821;
 				Match(UNQUOTED_STRING);
 				}
 				break;
@@ -6640,25 +6235,19 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitCpuDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitCpuDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public CpuDirectiveContext cpuDirective() {
 		CpuDirectiveContext _localctx = new CpuDirectiveContext(Context, State);
-		EnterRule(_localctx, 160, RULE_cpuDirective);
+		EnterRule(_localctx, 162, RULE_cpuDirective);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 814;
+			State = 824;
 			Match(DOTCPU);
-			State = 815;
+			State = 825;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 8053063680L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -6700,24 +6289,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitByteDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitByteDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ByteDirectiveContext byteDirective() {
 		ByteDirectiveContext _localctx = new ByteDirectiveContext(Context, State);
-		EnterRule(_localctx, 162, RULE_byteDirective);
+		EnterRule(_localctx, 164, RULE_byteDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 817;
+			State = 827;
 			Match(DOTBYTE);
-			State = 818;
+			State = 828;
 			numberList();
 			}
 		}
@@ -6752,24 +6335,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitWordDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitWordDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public WordDirectiveContext wordDirective() {
 		WordDirectiveContext _localctx = new WordDirectiveContext(Context, State);
-		EnterRule(_localctx, 164, RULE_wordDirective);
+		EnterRule(_localctx, 166, RULE_wordDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 820;
+			State = 830;
 			Match(DOTWORD);
-			State = 821;
+			State = 831;
 			numberList();
 			}
 		}
@@ -6804,24 +6381,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitDwordDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitDwordDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public DwordDirectiveContext dwordDirective() {
 		DwordDirectiveContext _localctx = new DwordDirectiveContext(Context, State);
-		EnterRule(_localctx, 166, RULE_dwordDirective);
+		EnterRule(_localctx, 168, RULE_dwordDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 823;
+			State = 833;
 			Match(DOTDWORD);
-			State = 824;
+			State = 834;
 			numberList();
 			}
 		}
@@ -6854,24 +6425,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitTextDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitTextDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public TextDirectiveContext textDirective() {
 		TextDirectiveContext _localctx = new TextDirectiveContext(Context, State);
-		EnterRule(_localctx, 168, RULE_textDirective);
+		EnterRule(_localctx, 170, RULE_textDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 826;
+			State = 836;
 			Match(DOTTEXT);
-			State = 827;
+			State = 837;
 			Match(STRING);
 			}
 		}
@@ -6912,23 +6477,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFillDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFillDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FillDirectiveContext fillDirective() {
 		FillDirectiveContext _localctx = new FillDirectiveContext(Context, State);
-		EnterRule(_localctx, 170, RULE_fillDirective);
+		EnterRule(_localctx, 172, RULE_fillDirective);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 829;
+			State = 839;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 3670016L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -6937,11 +6496,11 @@ public partial class KickAssemblerParser : Parser {
 				ErrorHandler.ReportMatch(this);
 			    Consume();
 			}
-			State = 830;
+			State = 840;
 			number();
-			State = 831;
+			State = 841;
 			Match(COMMA);
-			State = 832;
+			State = 842;
 			fillDirectiveArguments();
 			}
 		}
@@ -6983,44 +6542,38 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFillDirectiveArguments(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFillDirectiveArguments(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FillDirectiveArgumentsContext fillDirectiveArguments() {
 		FillDirectiveArgumentsContext _localctx = new FillDirectiveArgumentsContext(Context, State);
-		EnterRule(_localctx, 172, RULE_fillDirectiveArguments);
+		EnterRule(_localctx, 174, RULE_fillDirectiveArguments);
 		try {
-			State = 840;
+			State = 850;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,51,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,52,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 834;
+				State = 844;
 				number();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 835;
+				State = 845;
 				Match(OPEN_BRACKET);
-				State = 836;
+				State = 846;
 				numberList();
-				State = 837;
+				State = 847;
 				Match(CLOSE_BRACKET);
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 839;
+				State = 849;
 				fillExpression();
 				}
 				break;
@@ -7053,18 +6606,12 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFillExpression(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFillExpression(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FillExpressionContext fillExpression() {
 		FillExpressionContext _localctx = new FillExpressionContext(Context, State);
-		EnterRule(_localctx, 174, RULE_fillExpression);
+		EnterRule(_localctx, 176, RULE_fillExpression);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
@@ -7099,24 +6646,18 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitEncodingDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEncodingDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public EncodingDirectiveContext encodingDirective() {
 		EncodingDirectiveContext _localctx = new EncodingDirectiveContext(Context, State);
-		EnterRule(_localctx, 176, RULE_encodingDirective);
+		EnterRule(_localctx, 178, RULE_encodingDirective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 844;
+			State = 854;
 			Match(DOTENCODING);
-			State = 845;
+			State = 855;
 			Match(STRING);
 			}
 		}
@@ -7165,25 +6706,19 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitImportDataDirective(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitImportDataDirective(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ImportDataDirectiveContext importDataDirective() {
 		ImportDataDirectiveContext _localctx = new ImportDataDirectiveContext(Context, State);
-		EnterRule(_localctx, 178, RULE_importDataDirective);
+		EnterRule(_localctx, 180, RULE_importDataDirective);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 847;
+			State = 857;
 			Match(DOTIMPORT);
-			State = 848;
+			State = 858;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 221184L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -7192,25 +6727,25 @@ public partial class KickAssemblerParser : Parser {
 				ErrorHandler.ReportMatch(this);
 			    Consume();
 			}
-			State = 849;
+			State = 859;
 			file();
-			State = 856;
+			State = 866;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,53,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,54,Context) ) {
 			case 1:
 				{
-				State = 850;
+				State = 860;
 				Match(COMMA);
-				State = 851;
+				State = 861;
 				number();
-				State = 854;
+				State = 864;
 				ErrorHandler.Sync(this);
-				switch ( Interpreter.AdaptivePredict(TokenStream,52,Context) ) {
+				switch ( Interpreter.AdaptivePredict(TokenStream,53,Context) ) {
 				case 1:
 					{
-					State = 852;
+					State = 862;
 					Match(COMMA);
-					State = 853;
+					State = 863;
 					number();
 					}
 					break;
@@ -7257,12 +6792,6 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitMultiLabel(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitMultiLabel(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 	public partial class MultiAnonymousLabelContext : LabelNameContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BANG() { return GetToken(KickAssemblerParser.BANG, 0); }
@@ -7276,12 +6805,6 @@ public partial class KickAssemblerParser : Parser {
 		public override void ExitRule(IParseTreeListener listener) {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitMultiAnonymousLabel(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitMultiAnonymousLabel(this);
-			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class AtNameLabelContext : LabelNameContext {
@@ -7299,29 +6822,23 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitAtNameLabel(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAtNameLabel(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public LabelNameContext labelName() {
 		LabelNameContext _localctx = new LabelNameContext(Context, State);
-		EnterRule(_localctx, 180, RULE_labelName);
+		EnterRule(_localctx, 182, RULE_labelName);
 		try {
-			State = 862;
+			State = 872;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,54,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,55,Context) ) {
 			case 1:
 				_localctx = new MultiLabelContext(_localctx);
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 858;
+				State = 868;
 				Match(BANG);
-				State = 859;
+				State = 869;
 				Match(UNQUOTED_STRING);
 				}
 				break;
@@ -7329,7 +6846,7 @@ public partial class KickAssemblerParser : Parser {
 				_localctx = new MultiAnonymousLabelContext(_localctx);
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 860;
+				State = 870;
 				Match(BANG);
 				}
 				break;
@@ -7337,7 +6854,7 @@ public partial class KickAssemblerParser : Parser {
 				_localctx = new AtNameLabelContext(_localctx);
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 861;
+				State = 871;
 				atName();
 				}
 				break;
@@ -7372,35 +6889,29 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitAtName(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAtName(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public AtNameContext atName() {
 		AtNameContext _localctx = new AtNameContext(Context, State);
-		EnterRule(_localctx, 182, RULE_atName);
+		EnterRule(_localctx, 184, RULE_atName);
 		try {
-			State = 867;
+			State = 877;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case AT:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 864;
+				State = 874;
 				Match(AT);
-				State = 865;
+				State = 875;
 				Match(UNQUOTED_STRING);
 				}
 				break;
 			case UNQUOTED_STRING:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 866;
+				State = 876;
 				Match(UNQUOTED_STRING);
 				}
 				break;
@@ -7436,22 +6947,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFile(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFile(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FileContext file() {
 		FileContext _localctx = new FileContext(Context, State);
-		EnterRule(_localctx, 184, RULE_file);
+		EnterRule(_localctx, 186, RULE_file);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 869;
+			State = 879;
 			Match(STRING);
 			}
 		}
@@ -7492,41 +6997,35 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitNumberList(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitNumberList(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public NumberListContext numberList() {
 		NumberListContext _localctx = new NumberListContext(Context, State);
-		EnterRule(_localctx, 186, RULE_numberList);
+		EnterRule(_localctx, 188, RULE_numberList);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 871;
+			State = 881;
 			number();
-			State = 876;
+			State = 886;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,56,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,57,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 872;
+					State = 882;
 					Match(COMMA);
-					State = 873;
+					State = 883;
 					number();
 					}
 					} 
 				}
-				State = 878;
+				State = 888;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,56,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,57,Context);
 			}
 			}
 		}
@@ -7567,37 +7066,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitNumericList(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitNumericList(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public NumericListContext numericList() {
 		NumericListContext _localctx = new NumericListContext(Context, State);
-		EnterRule(_localctx, 188, RULE_numericList);
+		EnterRule(_localctx, 190, RULE_numericList);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 879;
+			State = 889;
 			numeric();
-			State = 884;
+			State = 894;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				State = 880;
+				State = 890;
 				Match(COMMA);
-				State = 881;
+				State = 891;
 				numeric();
 				}
 				}
-				State = 886;
+				State = 896;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -7637,27 +7130,21 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitNumeric(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitNumeric(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public NumericContext numeric() {
 		NumericContext _localctx = new NumericContext(Context, State);
-		EnterRule(_localctx, 190, RULE_numeric);
+		EnterRule(_localctx, 192, RULE_numeric);
 		int _la;
 		try {
-			State = 892;
+			State = 902;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case CHAR:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 887;
+				State = 897;
 				Match(CHAR);
 				}
 				break;
@@ -7668,17 +7155,17 @@ public partial class KickAssemblerParser : Parser {
 			case BIN_NUMBER:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 889;
+				State = 899;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if (_la==LT || _la==GT) {
 					{
-					State = 888;
+					State = 898;
 					lohibyte();
 					}
 				}
 
-				State = 891;
+				State = 901;
 				number();
 				}
 				break;
@@ -7722,40 +7209,34 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitNumber(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitNumber(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public NumberContext number() {
 		NumberContext _localctx = new NumberContext(Context, State);
-		EnterRule(_localctx, 192, RULE_number);
+		EnterRule(_localctx, 194, RULE_number);
 		try {
-			State = 897;
+			State = 907;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case DEC_NUMBER:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 894;
+				State = 904;
 				decNumber();
 				}
 				break;
 			case HEX_NUMBER:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 895;
+				State = 905;
 				hexNumber();
 				}
 				break;
 			case BIN_NUMBER:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 896;
+				State = 906;
 				binNumber();
 				}
 				break;
@@ -7792,23 +7273,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitLohibyte(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitLohibyte(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public LohibyteContext lohibyte() {
 		LohibyteContext _localctx = new LohibyteContext(Context, State);
-		EnterRule(_localctx, 194, RULE_lohibyte);
+		EnterRule(_localctx, 196, RULE_lohibyte);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 899;
+			State = 909;
 			_la = TokenStream.LA(1);
 			if ( !(_la==LT || _la==GT) ) {
 			ErrorHandler.RecoverInline(this);
@@ -7847,22 +7322,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitDecNumber(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitDecNumber(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public DecNumberContext decNumber() {
 		DecNumberContext _localctx = new DecNumberContext(Context, State);
-		EnterRule(_localctx, 196, RULE_decNumber);
+		EnterRule(_localctx, 198, RULE_decNumber);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 901;
+			State = 911;
 			Match(DEC_NUMBER);
 			}
 		}
@@ -7894,22 +7363,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitHexNumber(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitHexNumber(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public HexNumberContext hexNumber() {
 		HexNumberContext _localctx = new HexNumberContext(Context, State);
-		EnterRule(_localctx, 198, RULE_hexNumber);
+		EnterRule(_localctx, 200, RULE_hexNumber);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 903;
+			State = 913;
 			Match(HEX_NUMBER);
 			}
 		}
@@ -7941,22 +7404,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitBinNumber(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitBinNumber(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public BinNumberContext binNumber() {
 		BinNumberContext _localctx = new BinNumberContext(Context, State);
-		EnterRule(_localctx, 200, RULE_binNumber);
+		EnterRule(_localctx, 202, RULE_binNumber);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 905;
+			State = 915;
 			Match(BIN_NUMBER);
 			}
 		}
@@ -7989,23 +7446,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitBoolean(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitBoolean(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public BooleanContext boolean() {
 		BooleanContext _localctx = new BooleanContext(Context, State);
-		EnterRule(_localctx, 202, RULE_boolean);
+		EnterRule(_localctx, 204, RULE_boolean);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 907;
+			State = 917;
 			_la = TokenStream.LA(1);
 			if ( !(_la==TRUE || _la==FALSE) ) {
 			ErrorHandler.RecoverInline(this);
@@ -8044,22 +7495,16 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitOpcodeExtension(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitOpcodeExtension(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public OpcodeExtensionContext opcodeExtension() {
 		OpcodeExtensionContext _localctx = new OpcodeExtensionContext(Context, State);
-		EnterRule(_localctx, 204, RULE_opcodeExtension);
+		EnterRule(_localctx, 206, RULE_opcodeExtension);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 909;
+			State = 919;
 			Match(UNQUOTED_STRING);
 			}
 		}
@@ -8097,37 +7542,31 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitFullOpcode(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFullOpcode(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public FullOpcodeContext fullOpcode() {
 		FullOpcodeContext _localctx = new FullOpcodeContext(Context, State);
-		EnterRule(_localctx, 206, RULE_fullOpcode);
+		EnterRule(_localctx, 208, RULE_fullOpcode);
 		try {
-			State = 916;
+			State = 926;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,61,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,62,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 911;
+				State = 921;
 				opcode();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 912;
+				State = 922;
 				opcode();
-				State = 913;
+				State = 923;
 				Match(DOT);
-				State = 914;
+				State = 924;
 				opcodeExtension();
 				}
 				break;
@@ -8221,23 +7660,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitOpcode(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitOpcode(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public OpcodeContext opcode() {
 		OpcodeContext _localctx = new OpcodeContext(Context, State);
-		EnterRule(_localctx, 208, RULE_opcode);
+		EnterRule(_localctx, 210, RULE_opcode);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 918;
+			State = 928;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 147)) & ~0x3f) == 0 && ((1L << (_la - 147)) & 2305843009213693951L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -8294,23 +7727,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitColor(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitColor(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public ColorContext color() {
 		ColorContext _localctx = new ColorContext(Context, State);
-		EnterRule(_localctx, 210, RULE_color);
+		EnterRule(_localctx, 212, RULE_color);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 920;
+			State = 930;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 524287L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -8644,23 +8071,17 @@ public partial class KickAssemblerParser : Parser {
 			IKickAssemblerParserListener typedListener = listener as IKickAssemblerParserListener;
 			if (typedListener != null) typedListener.ExitOpcodeConstant(this);
 		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IKickAssemblerParserVisitor<TResult> typedVisitor = visitor as IKickAssemblerParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitOpcodeConstant(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
 	public OpcodeConstantContext opcodeConstant() {
 		OpcodeConstantContext _localctx = new OpcodeConstantContext(Context, State);
-		EnterRule(_localctx, 212, RULE_opcodeConstant);
+		EnterRule(_localctx, 214, RULE_opcodeConstant);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 922;
+			State = 932;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 208)) & ~0x3f) == 0 && ((1L << (_la - 208)) & -1L) != 0) || ((((_la - 272)) & ~0x3f) == 0 && ((1L << (_la - 272)) & -1L) != 0) || ((((_la - 336)) & ~0x3f) == 0 && ((1L << (_la - 336)) & -1L) != 0) || ((((_la - 400)) & ~0x3f) == 0 && ((1L << (_la - 400)) & -1L) != 0) || ((((_la - 464)) & ~0x3f) == 0 && ((1L << (_la - 464)) & 1099511627775L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -8684,8 +8105,8 @@ public partial class KickAssemblerParser : Parser {
 
 	public override bool Sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 12: return expression_sempred((ExpressionContext)_localctx, predIndex);
-		case 77: return preprocessorCondition_sempred((PreprocessorConditionContext)_localctx, predIndex);
+		case 13: return expression_sempred((ExpressionContext)_localctx, predIndex);
+		case 78: return preprocessorCondition_sempred((PreprocessorConditionContext)_localctx, predIndex);
 		}
 		return true;
 	}
@@ -8714,7 +8135,7 @@ public partial class KickAssemblerParser : Parser {
 	}
 
 	private static int[] _serializedATN = {
-		4,1,514,925,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
+		4,1,514,935,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
 		7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,
 		2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,21,
 		2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,7,27,2,28,7,28,
@@ -8729,300 +8150,303 @@ public partial class KickAssemblerParser : Parser {
 		2,85,7,85,2,86,7,86,2,87,7,87,2,88,7,88,2,89,7,89,2,90,7,90,2,91,7,91,
 		2,92,7,92,2,93,7,93,2,94,7,94,2,95,7,95,2,96,7,96,2,97,7,97,2,98,7,98,
 		2,99,7,99,2,100,7,100,2,101,7,101,2,102,7,102,2,103,7,103,2,104,7,104,
-		2,105,7,105,2,106,7,106,1,0,1,0,1,1,1,1,1,1,1,2,1,2,4,2,222,8,2,11,2,12,
-		2,223,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,234,8,2,1,3,1,3,1,3,1,3,1,3,
-		1,3,1,3,1,3,3,3,244,8,3,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,255,8,
-		5,1,6,3,6,258,8,6,1,6,1,6,3,6,262,8,6,1,7,1,7,1,7,1,7,1,8,1,8,1,8,1,8,
-		1,8,1,8,1,9,1,9,1,9,5,9,277,8,9,10,9,12,9,280,9,9,1,10,4,10,283,8,10,11,
-		10,12,10,284,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,
-		10,1,10,1,10,1,10,1,10,1,10,3,10,304,8,10,1,11,1,11,1,11,1,11,1,11,1,11,
-		3,11,312,8,11,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,
-		12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,335,8,12,1,12,1,12,
-		1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,
-		1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,
-		5,12,367,8,12,10,12,12,12,370,9,12,1,13,1,13,1,14,1,14,1,14,1,14,1,15,
-		1,15,1,15,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,
-		3,16,393,8,16,1,17,1,17,1,18,1,18,1,18,1,18,1,18,3,18,402,8,18,1,18,1,
-		18,1,19,1,19,1,19,3,19,409,8,19,1,19,1,19,1,20,1,20,1,21,1,21,1,21,1,21,
-		1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,
-		1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,3,21,
-		446,8,21,1,22,1,22,1,22,1,23,1,23,1,23,1,24,1,24,3,24,456,8,24,1,25,1,
-		25,1,25,1,26,1,26,1,26,1,27,1,27,1,27,1,28,1,28,1,28,1,28,1,28,1,28,1,
-		28,3,28,474,8,28,1,29,1,29,1,29,1,29,1,29,1,29,1,29,1,30,1,30,1,30,1,31,
-		1,31,3,31,488,8,31,1,32,1,32,3,32,492,8,32,1,33,1,33,1,33,1,34,1,34,1,
-		34,1,34,1,34,1,34,1,34,1,34,3,34,505,8,34,1,34,1,34,1,34,3,34,510,8,34,
-		1,35,1,35,1,35,3,35,515,8,35,1,35,1,35,1,36,1,36,1,36,5,36,522,8,36,10,
-		36,12,36,525,9,36,1,37,1,37,1,37,3,37,530,8,37,1,38,1,38,1,38,3,38,535,
-		8,38,1,38,1,38,3,38,539,8,38,1,38,1,38,3,38,543,8,38,1,38,1,38,3,38,547,
-		8,38,1,39,1,39,1,39,1,39,1,39,1,39,1,40,1,40,1,40,1,40,1,40,1,40,1,41,
-		1,41,1,41,5,41,564,8,41,10,41,12,41,567,9,41,1,41,3,41,570,8,41,1,42,1,
-		42,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,44,1,44,1,44,1,45,1,45,1,45,1,
-		45,1,45,1,45,1,45,1,46,1,46,1,46,1,46,1,47,1,47,1,47,5,47,598,8,47,10,
-		47,12,47,601,9,47,1,48,1,48,1,48,3,48,606,8,48,1,49,1,49,1,49,1,49,1,50,
-		1,50,1,50,1,51,1,51,1,51,1,51,1,51,1,51,1,51,1,51,3,51,623,8,51,1,52,1,
-		52,1,52,1,52,1,53,1,53,1,53,1,53,1,54,1,54,1,54,1,55,1,55,3,55,638,8,55,
-		1,55,1,55,1,55,1,55,1,55,1,56,1,56,1,56,5,56,648,8,56,10,56,12,56,651,
-		9,56,1,57,1,57,5,57,655,8,57,10,57,12,57,658,9,57,1,57,1,57,1,58,1,58,
-		1,58,5,58,665,8,58,10,58,12,58,668,9,58,1,59,1,59,1,59,1,59,1,59,3,59,
-		675,8,59,1,60,1,60,1,60,1,60,1,60,1,60,1,61,1,61,1,61,1,61,1,61,1,61,1,
-		62,1,62,1,62,1,62,1,62,1,62,1,63,1,63,1,63,1,63,1,64,1,64,1,64,1,65,1,
-		65,1,65,1,65,1,65,1,66,1,66,5,66,709,8,66,10,66,12,66,712,9,66,1,67,1,
-		67,1,67,1,67,1,67,1,68,1,68,1,69,1,69,1,69,1,69,1,69,1,69,3,69,727,8,69,
-		1,70,1,70,1,70,1,71,1,71,1,71,1,72,1,72,1,72,1,73,1,73,1,73,1,73,1,74,
-		1,74,1,74,1,75,1,75,1,75,1,75,1,75,1,75,5,75,751,8,75,10,75,12,75,754,
-		9,75,1,75,1,75,3,75,758,8,75,1,75,1,75,1,76,1,76,1,76,1,76,1,76,3,76,767,
-		8,76,1,77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,3,77,777,8,77,1,77,1,77,1,
-		77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,5,77,791,8,77,10,77,12,
-		77,794,9,77,1,78,1,78,1,78,1,78,1,78,1,78,1,78,1,78,1,78,3,78,805,8,78,
-		1,79,1,79,1,79,3,79,810,8,79,1,79,3,79,813,8,79,1,80,1,80,1,80,1,81,1,
-		81,1,81,1,82,1,82,1,82,1,83,1,83,1,83,1,84,1,84,1,84,1,85,1,85,1,85,1,
-		85,1,85,1,86,1,86,1,86,1,86,1,86,1,86,3,86,841,8,86,1,87,1,87,1,88,1,88,
-		1,88,1,89,1,89,1,89,1,89,1,89,1,89,1,89,3,89,855,8,89,3,89,857,8,89,1,
-		90,1,90,1,90,1,90,3,90,863,8,90,1,91,1,91,1,91,3,91,868,8,91,1,92,1,92,
-		1,93,1,93,1,93,5,93,875,8,93,10,93,12,93,878,9,93,1,94,1,94,1,94,5,94,
-		883,8,94,10,94,12,94,886,9,94,1,95,1,95,3,95,890,8,95,1,95,3,95,893,8,
-		95,1,96,1,96,1,96,3,96,898,8,96,1,97,1,97,1,98,1,98,1,99,1,99,1,100,1,
-		100,1,101,1,101,1,102,1,102,1,103,1,103,1,103,1,103,1,103,3,103,917,8,
-		103,1,104,1,104,1,105,1,105,1,106,1,106,1,106,0,2,24,154,107,0,2,4,6,8,
-		10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,
-		58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,
-		104,106,108,110,112,114,116,118,120,122,124,126,128,130,132,134,136,138,
-		140,142,144,146,148,150,152,154,156,158,160,162,164,166,168,170,172,174,
-		176,178,180,182,184,186,188,190,192,194,196,198,200,202,204,206,208,210,
-		212,0,13,1,0,504,505,1,0,98,99,3,0,103,105,107,107,132,133,2,0,110,111,
-		120,123,2,0,65,65,126,126,1,0,29,32,1,0,19,21,2,0,13,14,16,17,1,0,110,
-		111,1,0,137,138,1,0,147,207,1,0,69,87,1,0,208,503,964,0,214,1,0,0,0,2,
-		216,1,0,0,0,4,233,1,0,0,0,6,243,1,0,0,0,8,245,1,0,0,0,10,254,1,0,0,0,12,
-		257,1,0,0,0,14,263,1,0,0,0,16,267,1,0,0,0,18,273,1,0,0,0,20,303,1,0,0,
-		0,22,311,1,0,0,0,24,334,1,0,0,0,26,371,1,0,0,0,28,373,1,0,0,0,30,377,1,
-		0,0,0,32,392,1,0,0,0,34,394,1,0,0,0,36,396,1,0,0,0,38,405,1,0,0,0,40,412,
-		1,0,0,0,42,445,1,0,0,0,44,447,1,0,0,0,46,450,1,0,0,0,48,455,1,0,0,0,50,
-		457,1,0,0,0,52,460,1,0,0,0,54,463,1,0,0,0,56,466,1,0,0,0,58,475,1,0,0,
-		0,60,482,1,0,0,0,62,487,1,0,0,0,64,489,1,0,0,0,66,493,1,0,0,0,68,509,1,
-		0,0,0,70,511,1,0,0,0,72,518,1,0,0,0,74,526,1,0,0,0,76,531,1,0,0,0,78,548,
-		1,0,0,0,80,554,1,0,0,0,82,569,1,0,0,0,84,571,1,0,0,0,86,573,1,0,0,0,88,
-		580,1,0,0,0,90,583,1,0,0,0,92,590,1,0,0,0,94,594,1,0,0,0,96,602,1,0,0,
-		0,98,607,1,0,0,0,100,611,1,0,0,0,102,622,1,0,0,0,104,624,1,0,0,0,106,628,
-		1,0,0,0,108,632,1,0,0,0,110,635,1,0,0,0,112,644,1,0,0,0,114,652,1,0,0,
-		0,116,661,1,0,0,0,118,669,1,0,0,0,120,676,1,0,0,0,122,682,1,0,0,0,124,
-		688,1,0,0,0,126,694,1,0,0,0,128,698,1,0,0,0,130,701,1,0,0,0,132,706,1,
-		0,0,0,134,713,1,0,0,0,136,718,1,0,0,0,138,726,1,0,0,0,140,728,1,0,0,0,
-		142,731,1,0,0,0,144,734,1,0,0,0,146,737,1,0,0,0,148,741,1,0,0,0,150,744,
-		1,0,0,0,152,766,1,0,0,0,154,776,1,0,0,0,156,804,1,0,0,0,158,806,1,0,0,
-		0,160,814,1,0,0,0,162,817,1,0,0,0,164,820,1,0,0,0,166,823,1,0,0,0,168,
-		826,1,0,0,0,170,829,1,0,0,0,172,840,1,0,0,0,174,842,1,0,0,0,176,844,1,
-		0,0,0,178,847,1,0,0,0,180,862,1,0,0,0,182,867,1,0,0,0,184,869,1,0,0,0,
-		186,871,1,0,0,0,188,879,1,0,0,0,190,892,1,0,0,0,192,897,1,0,0,0,194,899,
-		1,0,0,0,196,901,1,0,0,0,198,903,1,0,0,0,200,905,1,0,0,0,202,907,1,0,0,
-		0,204,909,1,0,0,0,206,916,1,0,0,0,208,918,1,0,0,0,210,920,1,0,0,0,212,
-		922,1,0,0,0,214,215,6,0,-1,0,215,1,1,0,0,0,216,217,3,4,2,0,217,218,5,0,
-		0,1,218,3,1,0,0,0,219,221,3,6,3,0,220,222,5,97,0,0,221,220,1,0,0,0,222,
-		223,1,0,0,0,223,221,1,0,0,0,223,224,1,0,0,0,224,225,1,0,0,0,225,226,3,
-		4,2,0,226,234,1,0,0,0,227,228,3,6,3,0,228,229,3,0,0,0,229,230,3,4,2,0,
-		230,234,1,0,0,0,231,234,3,6,3,0,232,234,1,0,0,0,233,219,1,0,0,0,233,227,
-		1,0,0,0,233,231,1,0,0,0,233,232,1,0,0,0,234,5,1,0,0,0,235,244,3,12,6,0,
-		236,244,3,10,5,0,237,244,3,156,78,0,238,244,3,16,8,0,239,244,3,14,7,0,
-		240,244,3,42,21,0,241,244,3,138,69,0,242,244,3,8,4,0,243,235,1,0,0,0,243,
-		236,1,0,0,0,243,237,1,0,0,0,243,238,1,0,0,0,243,239,1,0,0,0,243,240,1,
-		0,0,0,243,241,1,0,0,0,243,242,1,0,0,0,244,7,1,0,0,0,245,246,7,0,0,0,246,
-		9,1,0,0,0,247,248,3,180,90,0,248,249,5,96,0,0,249,250,3,6,3,0,250,255,
-		1,0,0,0,251,252,3,180,90,0,252,253,5,96,0,0,253,255,1,0,0,0,254,247,1,
-		0,0,0,254,251,1,0,0,0,255,11,1,0,0,0,256,258,5,96,0,0,257,256,1,0,0,0,
-		257,258,1,0,0,0,258,259,1,0,0,0,259,261,3,206,103,0,260,262,3,18,9,0,261,
-		260,1,0,0,0,261,262,1,0,0,0,262,13,1,0,0,0,263,264,5,88,0,0,264,265,3,
-		4,2,0,265,266,5,89,0,0,266,15,1,0,0,0,267,268,5,504,0,0,268,269,5,96,0,
-		0,269,270,5,88,0,0,270,271,3,4,2,0,271,272,5,89,0,0,272,17,1,0,0,0,273,
-		278,3,20,10,0,274,275,5,95,0,0,275,277,3,20,10,0,276,274,1,0,0,0,277,280,
-		1,0,0,0,278,276,1,0,0,0,278,279,1,0,0,0,279,19,1,0,0,0,280,278,1,0,0,0,
-		281,283,7,1,0,0,282,281,1,0,0,0,283,284,1,0,0,0,284,282,1,0,0,0,284,285,
-		1,0,0,0,285,304,1,0,0,0,286,287,5,3,0,0,287,304,3,212,106,0,288,289,5,
-		3,0,0,289,304,3,190,95,0,290,291,5,92,0,0,291,292,3,18,9,0,292,293,5,93,
-		0,0,293,304,1,0,0,0,294,295,5,90,0,0,295,296,3,18,9,0,296,297,5,91,0,0,
-		297,304,1,0,0,0,298,304,3,22,11,0,299,300,5,100,0,0,300,304,3,24,12,0,
-		301,304,3,24,12,0,302,304,5,100,0,0,303,282,1,0,0,0,303,286,1,0,0,0,303,
-		288,1,0,0,0,303,290,1,0,0,0,303,294,1,0,0,0,303,298,1,0,0,0,303,299,1,
-		0,0,0,303,301,1,0,0,0,303,302,1,0,0,0,304,21,1,0,0,0,305,306,3,180,90,
-		0,306,307,5,99,0,0,307,312,1,0,0,0,308,309,3,180,90,0,309,310,5,98,0,0,
-		310,312,1,0,0,0,311,305,1,0,0,0,311,308,1,0,0,0,312,23,1,0,0,0,313,314,
-		6,12,-1,0,314,315,5,92,0,0,315,316,3,24,12,0,316,317,5,93,0,0,317,335,
-		1,0,0,0,318,319,5,90,0,0,319,320,3,24,12,0,320,321,5,91,0,0,321,335,1,
-		0,0,0,322,323,5,98,0,0,323,335,3,24,12,12,324,325,5,99,0,0,325,335,3,24,
-		12,11,326,335,3,36,18,0,327,335,3,38,19,0,328,335,3,190,95,0,329,335,3,
-		212,106,0,330,335,3,210,105,0,331,335,3,202,101,0,332,335,3,180,90,0,333,
-		335,5,143,0,0,334,313,1,0,0,0,334,318,1,0,0,0,334,322,1,0,0,0,334,324,
-		1,0,0,0,334,326,1,0,0,0,334,327,1,0,0,0,334,328,1,0,0,0,334,329,1,0,0,
-		0,334,330,1,0,0,0,334,331,1,0,0,0,334,332,1,0,0,0,334,333,1,0,0,0,335,
-		368,1,0,0,0,336,337,10,19,0,0,337,338,3,26,13,0,338,339,3,24,12,20,339,
-		367,1,0,0,0,340,341,10,18,0,0,341,342,5,100,0,0,342,367,3,24,12,19,343,
-		344,10,17,0,0,344,345,5,101,0,0,345,367,3,24,12,18,346,347,10,16,0,0,347,
-		348,5,98,0,0,348,367,3,24,12,17,349,350,10,15,0,0,350,351,5,99,0,0,351,
-		367,3,24,12,16,352,353,10,10,0,0,353,354,3,34,17,0,354,355,3,24,12,11,
-		355,367,1,0,0,0,356,357,10,9,0,0,357,358,5,112,0,0,358,359,3,24,12,0,359,
-		360,5,96,0,0,360,361,3,24,12,10,361,367,1,0,0,0,362,363,10,14,0,0,363,
-		367,5,115,0,0,364,365,10,13,0,0,365,367,5,116,0,0,366,336,1,0,0,0,366,
-		340,1,0,0,0,366,343,1,0,0,0,366,346,1,0,0,0,366,349,1,0,0,0,366,352,1,
-		0,0,0,366,356,1,0,0,0,366,362,1,0,0,0,366,364,1,0,0,0,367,370,1,0,0,0,
-		368,366,1,0,0,0,368,369,1,0,0,0,369,25,1,0,0,0,370,368,1,0,0,0,371,372,
-		7,2,0,0,372,27,1,0,0,0,373,374,5,504,0,0,374,375,5,109,0,0,375,376,3,24,
-		12,0,376,29,1,0,0,0,377,378,5,504,0,0,378,379,3,32,16,0,379,31,1,0,0,0,
-		380,381,5,98,0,0,381,393,5,98,0,0,382,383,5,99,0,0,383,393,5,99,0,0,384,
-		385,5,98,0,0,385,393,5,109,0,0,386,387,5,99,0,0,387,393,5,109,0,0,388,
-		389,5,100,0,0,389,393,5,109,0,0,390,391,5,101,0,0,391,393,5,109,0,0,392,
-		380,1,0,0,0,392,382,1,0,0,0,392,384,1,0,0,0,392,386,1,0,0,0,392,388,1,
-		0,0,0,392,390,1,0,0,0,393,33,1,0,0,0,394,395,7,3,0,0,395,35,1,0,0,0,396,
-		397,5,143,0,0,397,398,5,94,0,0,398,399,5,143,0,0,399,401,5,92,0,0,400,
-		402,3,18,9,0,401,400,1,0,0,0,401,402,1,0,0,0,402,403,1,0,0,0,403,404,5,
-		93,0,0,404,37,1,0,0,0,405,406,5,504,0,0,406,408,5,92,0,0,407,409,3,18,
-		9,0,408,407,1,0,0,0,408,409,1,0,0,0,409,410,1,0,0,0,410,411,5,93,0,0,411,
-		39,1,0,0,0,412,413,3,24,12,0,413,41,1,0,0,0,414,446,3,44,22,0,415,446,
-		3,46,23,0,416,446,3,52,26,0,417,446,3,54,27,0,418,446,3,56,28,0,419,446,
-		3,58,29,0,420,446,3,60,30,0,421,446,3,64,32,0,422,446,3,66,33,0,423,446,
-		3,70,35,0,424,446,3,76,38,0,425,446,3,78,39,0,426,446,3,80,40,0,427,446,
-		3,86,43,0,428,446,3,90,45,0,429,446,3,92,46,0,430,446,3,96,48,0,431,446,
-		3,98,49,0,432,446,3,102,51,0,433,446,3,104,52,0,434,446,3,106,53,0,435,
-		446,3,100,50,0,436,446,3,108,54,0,437,446,3,110,55,0,438,446,3,120,60,
-		0,439,446,3,122,61,0,440,446,3,88,44,0,441,446,3,124,62,0,442,446,3,126,
-		63,0,443,446,3,128,64,0,444,446,3,130,65,0,445,414,1,0,0,0,445,415,1,0,
-		0,0,445,416,1,0,0,0,445,417,1,0,0,0,445,418,1,0,0,0,445,419,1,0,0,0,445,
-		420,1,0,0,0,445,421,1,0,0,0,445,422,1,0,0,0,445,423,1,0,0,0,445,424,1,
-		0,0,0,445,425,1,0,0,0,445,426,1,0,0,0,445,427,1,0,0,0,445,428,1,0,0,0,
-		445,429,1,0,0,0,445,430,1,0,0,0,445,431,1,0,0,0,445,432,1,0,0,0,445,433,
-		1,0,0,0,445,434,1,0,0,0,445,435,1,0,0,0,445,436,1,0,0,0,445,437,1,0,0,
-		0,445,438,1,0,0,0,445,439,1,0,0,0,445,440,1,0,0,0,445,441,1,0,0,0,445,
-		442,1,0,0,0,445,443,1,0,0,0,445,444,1,0,0,0,446,43,1,0,0,0,447,448,5,35,
-		0,0,448,449,3,24,12,0,449,45,1,0,0,0,450,451,5,36,0,0,451,452,3,24,12,
-		0,452,47,1,0,0,0,453,456,3,50,25,0,454,456,3,28,14,0,455,453,1,0,0,0,455,
-		454,1,0,0,0,456,49,1,0,0,0,457,458,5,38,0,0,458,459,3,28,14,0,459,51,1,
-		0,0,0,460,461,5,37,0,0,461,462,3,28,14,0,462,53,1,0,0,0,463,464,5,40,0,
-		0,464,465,3,28,14,0,465,55,1,0,0,0,466,467,5,41,0,0,467,468,5,92,0,0,468,
-		469,3,24,12,0,469,470,5,93,0,0,470,473,3,6,3,0,471,472,5,42,0,0,472,474,
-		3,6,3,0,473,471,1,0,0,0,473,474,1,0,0,0,474,57,1,0,0,0,475,476,5,43,0,
-		0,476,477,5,92,0,0,477,478,3,24,12,0,478,479,5,93,0,0,479,480,5,95,0,0,
-		480,481,5,143,0,0,481,59,1,0,0,0,482,483,5,44,0,0,483,484,3,62,31,0,484,
-		61,1,0,0,0,485,488,3,28,14,0,486,488,3,30,15,0,487,485,1,0,0,0,487,486,
-		1,0,0,0,488,63,1,0,0,0,489,491,5,66,0,0,490,492,5,143,0,0,491,490,1,0,
-		0,0,491,492,1,0,0,0,492,65,1,0,0,0,493,494,5,67,0,0,494,495,3,68,34,0,
-		495,67,1,0,0,0,496,510,3,24,12,0,497,498,3,24,12,0,498,499,5,95,0,0,499,
-		500,3,24,12,0,500,510,1,0,0,0,501,502,3,24,12,0,502,504,5,95,0,0,503,505,
-		3,24,12,0,504,503,1,0,0,0,504,505,1,0,0,0,505,506,1,0,0,0,506,507,5,95,
-		0,0,507,508,5,143,0,0,508,510,1,0,0,0,509,496,1,0,0,0,509,497,1,0,0,0,
-		509,501,1,0,0,0,510,69,1,0,0,0,511,512,5,45,0,0,512,514,5,88,0,0,513,515,
-		3,72,36,0,514,513,1,0,0,0,514,515,1,0,0,0,515,516,1,0,0,0,516,517,5,89,
-		0,0,517,71,1,0,0,0,518,523,3,74,37,0,519,520,5,95,0,0,520,522,3,74,37,
-		0,521,519,1,0,0,0,522,525,1,0,0,0,523,521,1,0,0,0,523,524,1,0,0,0,524,
-		73,1,0,0,0,525,523,1,0,0,0,526,529,5,504,0,0,527,528,5,109,0,0,528,530,
-		3,192,96,0,529,527,1,0,0,0,529,530,1,0,0,0,530,75,1,0,0,0,531,532,5,46,
-		0,0,532,534,5,92,0,0,533,535,3,48,24,0,534,533,1,0,0,0,534,535,1,0,0,0,
-		535,536,1,0,0,0,536,538,5,97,0,0,537,539,3,40,20,0,538,537,1,0,0,0,538,
-		539,1,0,0,0,539,540,1,0,0,0,540,542,5,97,0,0,541,543,3,24,12,0,542,541,
-		1,0,0,0,542,543,1,0,0,0,543,544,1,0,0,0,544,546,5,93,0,0,545,547,3,6,3,
-		0,546,545,1,0,0,0,546,547,1,0,0,0,547,77,1,0,0,0,548,549,5,47,0,0,549,
-		550,5,92,0,0,550,551,3,40,20,0,551,552,5,93,0,0,552,553,3,6,3,0,553,79,
-		1,0,0,0,554,555,5,48,0,0,555,556,5,504,0,0,556,557,5,88,0,0,557,558,3,
-		82,41,0,558,559,5,89,0,0,559,81,1,0,0,0,560,565,3,84,42,0,561,562,5,95,
-		0,0,562,564,3,84,42,0,563,561,1,0,0,0,564,567,1,0,0,0,565,563,1,0,0,0,
-		565,566,1,0,0,0,566,570,1,0,0,0,567,565,1,0,0,0,568,570,1,0,0,0,569,560,
-		1,0,0,0,569,568,1,0,0,0,570,83,1,0,0,0,571,572,5,504,0,0,572,85,1,0,0,
-		0,573,574,5,50,0,0,574,575,3,182,91,0,575,576,5,92,0,0,576,577,3,82,41,
-		0,577,578,5,93,0,0,578,579,3,14,7,0,579,87,1,0,0,0,580,581,5,51,0,0,581,
-		582,3,24,12,0,582,89,1,0,0,0,583,584,5,52,0,0,584,585,3,182,91,0,585,586,
-		5,92,0,0,586,587,3,82,41,0,587,588,5,93,0,0,588,589,3,14,7,0,589,91,1,
-		0,0,0,590,591,5,53,0,0,591,592,5,504,0,0,592,593,3,94,47,0,593,93,1,0,
-		0,0,594,599,5,504,0,0,595,596,5,96,0,0,596,598,5,504,0,0,597,595,1,0,0,
-		0,598,601,1,0,0,0,599,597,1,0,0,0,599,600,1,0,0,0,600,95,1,0,0,0,601,599,
-		1,0,0,0,602,603,5,55,0,0,603,605,5,504,0,0,604,606,3,14,7,0,605,604,1,
-		0,0,0,605,606,1,0,0,0,606,97,1,0,0,0,607,608,5,62,0,0,608,609,3,28,14,
-		0,609,610,3,14,7,0,610,99,1,0,0,0,611,612,5,61,0,0,612,613,5,143,0,0,613,
-		101,1,0,0,0,614,615,5,56,0,0,615,616,5,504,0,0,616,623,3,114,57,0,617,
-		618,5,56,0,0,618,619,5,504,0,0,619,623,5,143,0,0,620,621,5,56,0,0,621,
-		623,5,504,0,0,622,614,1,0,0,0,622,617,1,0,0,0,622,620,1,0,0,0,623,103,
-		1,0,0,0,624,625,5,57,0,0,625,626,5,504,0,0,626,627,3,114,57,0,627,105,
-		1,0,0,0,628,629,5,58,0,0,629,630,5,504,0,0,630,631,3,114,57,0,631,107,
-		1,0,0,0,632,633,5,63,0,0,633,634,3,114,57,0,634,109,1,0,0,0,635,637,5,
-		64,0,0,636,638,5,504,0,0,637,636,1,0,0,0,637,638,1,0,0,0,638,639,1,0,0,
-		0,639,640,3,114,57,0,640,641,5,88,0,0,641,642,3,112,56,0,642,643,5,89,
-		0,0,643,111,1,0,0,0,644,649,3,114,57,0,645,646,5,95,0,0,646,648,3,114,
-		57,0,647,645,1,0,0,0,648,651,1,0,0,0,649,647,1,0,0,0,649,650,1,0,0,0,650,
-		113,1,0,0,0,651,649,1,0,0,0,652,656,5,90,0,0,653,655,3,116,58,0,654,653,
-		1,0,0,0,655,658,1,0,0,0,656,654,1,0,0,0,656,657,1,0,0,0,657,659,1,0,0,
-		0,658,656,1,0,0,0,659,660,5,91,0,0,660,115,1,0,0,0,661,666,3,118,59,0,
-		662,663,5,95,0,0,663,665,3,118,59,0,664,662,1,0,0,0,665,668,1,0,0,0,666,
-		664,1,0,0,0,666,667,1,0,0,0,667,117,1,0,0,0,668,666,1,0,0,0,669,670,5,
-		504,0,0,670,674,5,109,0,0,671,675,3,192,96,0,672,675,5,143,0,0,673,675,
-		3,202,101,0,674,671,1,0,0,0,674,672,1,0,0,0,674,673,1,0,0,0,675,119,1,
-		0,0,0,676,677,5,59,0,0,677,678,5,504,0,0,678,679,5,92,0,0,679,680,5,93,
-		0,0,680,681,3,14,7,0,681,121,1,0,0,0,682,683,5,60,0,0,683,684,5,504,0,
-		0,684,685,5,92,0,0,685,686,3,20,10,0,686,687,5,93,0,0,687,123,1,0,0,0,
-		688,689,5,33,0,0,689,690,5,143,0,0,690,691,3,6,3,0,691,692,5,95,0,0,692,
-		693,3,6,3,0,693,125,1,0,0,0,694,695,5,34,0,0,695,696,5,143,0,0,696,697,
-		3,6,3,0,697,127,1,0,0,0,698,699,3,190,95,0,699,700,3,14,7,0,700,129,1,
-		0,0,0,701,702,5,68,0,0,702,703,5,88,0,0,703,704,3,132,66,0,704,705,5,89,
-		0,0,705,131,1,0,0,0,706,710,3,134,67,0,707,709,3,134,67,0,708,707,1,0,
-		0,0,709,712,1,0,0,0,710,708,1,0,0,0,710,711,1,0,0,0,711,133,1,0,0,0,712,
-		710,1,0,0,0,713,714,3,182,91,0,714,715,5,96,0,0,715,716,5,26,0,0,716,717,
-		5,139,0,0,717,135,1,0,0,0,718,719,5,504,0,0,719,137,1,0,0,0,720,727,3,
-		140,70,0,721,727,3,142,71,0,722,727,3,144,72,0,723,727,3,146,73,0,724,
-		727,3,148,74,0,725,727,3,150,75,0,726,720,1,0,0,0,726,721,1,0,0,0,726,
-		722,1,0,0,0,726,723,1,0,0,0,726,724,1,0,0,0,726,725,1,0,0,0,727,139,1,
-		0,0,0,728,729,5,4,0,0,729,730,5,506,0,0,730,141,1,0,0,0,731,732,5,5,0,
-		0,732,733,5,508,0,0,733,143,1,0,0,0,734,735,5,10,0,0,735,736,5,143,0,0,
-		736,145,1,0,0,0,737,738,5,12,0,0,738,739,5,513,0,0,739,740,5,143,0,0,740,
-		147,1,0,0,0,741,742,5,11,0,0,742,743,5,143,0,0,743,149,1,0,0,0,744,745,
-		5,6,0,0,745,746,5,510,0,0,746,752,3,152,76,0,747,748,5,9,0,0,748,749,5,
-		510,0,0,749,751,3,152,76,0,750,747,1,0,0,0,751,754,1,0,0,0,752,750,1,0,
-		0,0,752,753,1,0,0,0,753,757,1,0,0,0,754,752,1,0,0,0,755,756,5,8,0,0,756,
-		758,3,152,76,0,757,755,1,0,0,0,757,758,1,0,0,0,758,759,1,0,0,0,759,760,
-		5,7,0,0,760,151,1,0,0,0,761,762,3,0,0,0,762,763,3,6,3,0,763,764,3,0,0,
-		0,764,767,1,0,0,0,765,767,3,0,0,0,766,761,1,0,0,0,766,765,1,0,0,0,767,
-		153,1,0,0,0,768,769,6,77,-1,0,769,770,5,92,0,0,770,771,3,154,77,0,771,
-		772,5,93,0,0,772,777,1,0,0,0,773,774,5,106,0,0,774,777,3,154,77,6,775,
-		777,5,504,0,0,776,768,1,0,0,0,776,773,1,0,0,0,776,775,1,0,0,0,777,792,
-		1,0,0,0,778,779,10,5,0,0,779,780,5,117,0,0,780,791,3,154,77,6,781,782,
-		10,4,0,0,782,783,5,118,0,0,783,791,3,154,77,5,784,785,10,3,0,0,785,786,
-		5,120,0,0,786,791,3,154,77,4,787,788,10,2,0,0,788,789,5,121,0,0,789,791,
-		3,154,77,3,790,778,1,0,0,0,790,781,1,0,0,0,790,784,1,0,0,0,790,787,1,0,
-		0,0,791,794,1,0,0,0,792,790,1,0,0,0,792,793,1,0,0,0,793,155,1,0,0,0,794,
-		792,1,0,0,0,795,805,3,160,80,0,796,805,3,162,81,0,797,805,3,164,82,0,798,
-		805,3,166,83,0,799,805,3,168,84,0,800,805,3,170,85,0,801,805,3,176,88,
-		0,802,805,3,178,89,0,803,805,3,158,79,0,804,795,1,0,0,0,804,796,1,0,0,
-		0,804,797,1,0,0,0,804,798,1,0,0,0,804,799,1,0,0,0,804,800,1,0,0,0,804,
-		801,1,0,0,0,804,802,1,0,0,0,804,803,1,0,0,0,805,157,1,0,0,0,806,807,7,
-		4,0,0,807,809,3,192,96,0,808,810,5,143,0,0,809,808,1,0,0,0,809,810,1,0,
-		0,0,810,812,1,0,0,0,811,813,5,504,0,0,812,811,1,0,0,0,812,813,1,0,0,0,
-		813,159,1,0,0,0,814,815,5,25,0,0,815,816,7,5,0,0,816,161,1,0,0,0,817,818,
-		5,26,0,0,818,819,3,186,93,0,819,163,1,0,0,0,820,821,5,27,0,0,821,822,3,
-		186,93,0,822,165,1,0,0,0,823,824,5,28,0,0,824,825,3,186,93,0,825,167,1,
-		0,0,0,826,827,5,15,0,0,827,828,5,143,0,0,828,169,1,0,0,0,829,830,7,6,0,
-		0,830,831,3,192,96,0,831,832,5,95,0,0,832,833,3,172,86,0,833,171,1,0,0,
-		0,834,841,3,192,96,0,835,836,5,90,0,0,836,837,3,186,93,0,837,838,5,91,
-		0,0,838,841,1,0,0,0,839,841,3,174,87,0,840,834,1,0,0,0,840,835,1,0,0,0,
-		840,839,1,0,0,0,841,173,1,0,0,0,842,843,1,0,0,0,843,175,1,0,0,0,844,845,
-		5,18,0,0,845,846,5,143,0,0,846,177,1,0,0,0,847,848,5,39,0,0,848,849,7,
-		7,0,0,849,856,3,184,92,0,850,851,5,95,0,0,851,854,3,192,96,0,852,853,5,
-		95,0,0,853,855,3,192,96,0,854,852,1,0,0,0,854,855,1,0,0,0,855,857,1,0,
-		0,0,856,850,1,0,0,0,856,857,1,0,0,0,857,179,1,0,0,0,858,859,5,106,0,0,
-		859,863,5,504,0,0,860,863,5,106,0,0,861,863,3,182,91,0,862,858,1,0,0,0,
-		862,860,1,0,0,0,862,861,1,0,0,0,863,181,1,0,0,0,864,865,5,108,0,0,865,
-		868,5,504,0,0,866,868,5,504,0,0,867,864,1,0,0,0,867,866,1,0,0,0,868,183,
-		1,0,0,0,869,870,5,143,0,0,870,185,1,0,0,0,871,876,3,192,96,0,872,873,5,
-		95,0,0,873,875,3,192,96,0,874,872,1,0,0,0,875,878,1,0,0,0,876,874,1,0,
-		0,0,876,877,1,0,0,0,877,187,1,0,0,0,878,876,1,0,0,0,879,884,3,190,95,0,
-		880,881,5,95,0,0,881,883,3,190,95,0,882,880,1,0,0,0,883,886,1,0,0,0,884,
-		882,1,0,0,0,884,885,1,0,0,0,885,189,1,0,0,0,886,884,1,0,0,0,887,893,5,
-		142,0,0,888,890,3,194,97,0,889,888,1,0,0,0,889,890,1,0,0,0,890,891,1,0,
-		0,0,891,893,3,192,96,0,892,887,1,0,0,0,892,889,1,0,0,0,893,191,1,0,0,0,
-		894,898,3,196,98,0,895,898,3,198,99,0,896,898,3,200,100,0,897,894,1,0,
-		0,0,897,895,1,0,0,0,897,896,1,0,0,0,898,193,1,0,0,0,899,900,7,8,0,0,900,
-		195,1,0,0,0,901,902,5,139,0,0,902,197,1,0,0,0,903,904,5,140,0,0,904,199,
-		1,0,0,0,905,906,5,141,0,0,906,201,1,0,0,0,907,908,7,9,0,0,908,203,1,0,
-		0,0,909,910,5,504,0,0,910,205,1,0,0,0,911,917,3,208,104,0,912,913,3,208,
-		104,0,913,914,5,94,0,0,914,915,3,204,102,0,915,917,1,0,0,0,916,911,1,0,
-		0,0,916,912,1,0,0,0,917,207,1,0,0,0,918,919,7,10,0,0,919,209,1,0,0,0,920,
-		921,7,11,0,0,921,211,1,0,0,0,922,923,7,12,0,0,923,213,1,0,0,0,62,223,233,
-		243,254,257,261,278,284,303,311,334,366,368,392,401,408,445,455,473,487,
-		491,504,509,514,523,529,534,538,542,546,565,569,599,605,622,637,649,656,
-		666,674,710,726,752,757,766,776,790,792,804,809,812,840,854,856,862,867,
-		876,884,889,892,897,916
+		2,105,7,105,2,106,7,106,2,107,7,107,1,0,1,0,1,1,1,1,1,1,1,2,1,2,4,2,224,
+		8,2,11,2,12,2,225,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,236,8,2,1,3,1,3,
+		1,3,1,3,1,3,1,3,1,3,1,3,3,3,246,8,3,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,1,
+		5,3,5,257,8,5,1,6,3,6,260,8,6,1,6,1,6,3,6,264,8,6,1,7,1,7,1,7,1,7,1,8,
+		1,8,1,8,1,8,1,8,1,8,1,9,1,9,1,9,5,9,279,8,9,10,9,12,9,282,9,9,1,10,4,10,
+		285,8,10,11,10,12,10,286,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,
+		1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,3,10,309,8,10,1,
+		11,3,11,312,8,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,12,3,12,322,8,12,
+		1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,
+		1,13,1,13,1,13,1,13,1,13,1,13,1,13,3,13,345,8,13,1,13,1,13,1,13,1,13,1,
+		13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,
+		13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,5,13,377,8,13,
+		10,13,12,13,380,9,13,1,14,1,14,1,15,1,15,1,15,1,15,1,16,1,16,1,16,1,17,
+		1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,3,17,403,8,17,1,
+		18,1,18,1,19,1,19,1,19,1,19,1,19,3,19,412,8,19,1,19,1,19,1,20,1,20,1,20,
+		3,20,419,8,20,1,20,1,20,1,21,1,21,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,
+		22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,
+		22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,3,22,456,8,22,1,23,1,23,
+		1,23,1,24,1,24,1,24,1,25,1,25,3,25,466,8,25,1,26,1,26,1,26,1,27,1,27,1,
+		27,1,28,1,28,1,28,1,29,1,29,1,29,1,29,1,29,1,29,1,29,3,29,484,8,29,1,30,
+		1,30,1,30,1,30,1,30,1,30,1,30,1,31,1,31,1,31,1,32,1,32,3,32,498,8,32,1,
+		33,1,33,3,33,502,8,33,1,34,1,34,1,34,1,35,1,35,1,35,1,35,1,35,1,35,1,35,
+		1,35,3,35,515,8,35,1,35,1,35,1,35,3,35,520,8,35,1,36,1,36,1,36,3,36,525,
+		8,36,1,36,1,36,1,37,1,37,1,37,5,37,532,8,37,10,37,12,37,535,9,37,1,38,
+		1,38,1,38,3,38,540,8,38,1,39,1,39,1,39,3,39,545,8,39,1,39,1,39,3,39,549,
+		8,39,1,39,1,39,3,39,553,8,39,1,39,1,39,3,39,557,8,39,1,40,1,40,1,40,1,
+		40,1,40,1,40,1,41,1,41,1,41,1,41,1,41,1,41,1,42,1,42,1,42,5,42,574,8,42,
+		10,42,12,42,577,9,42,1,42,3,42,580,8,42,1,43,1,43,1,44,1,44,1,44,1,44,
+		1,44,1,44,1,44,1,45,1,45,1,45,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,47,
+		1,47,1,47,1,47,1,48,1,48,1,48,5,48,608,8,48,10,48,12,48,611,9,48,1,49,
+		1,49,1,49,3,49,616,8,49,1,50,1,50,1,50,1,50,1,51,1,51,1,51,1,52,1,52,1,
+		52,1,52,1,52,1,52,1,52,1,52,3,52,633,8,52,1,53,1,53,1,53,1,53,1,54,1,54,
+		1,54,1,54,1,55,1,55,1,55,1,56,1,56,3,56,648,8,56,1,56,1,56,1,56,1,56,1,
+		56,1,57,1,57,1,57,5,57,658,8,57,10,57,12,57,661,9,57,1,58,1,58,5,58,665,
+		8,58,10,58,12,58,668,9,58,1,58,1,58,1,59,1,59,1,59,5,59,675,8,59,10,59,
+		12,59,678,9,59,1,60,1,60,1,60,1,60,1,60,3,60,685,8,60,1,61,1,61,1,61,1,
+		61,1,61,1,61,1,62,1,62,1,62,1,62,1,62,1,62,1,63,1,63,1,63,1,63,1,63,1,
+		63,1,64,1,64,1,64,1,64,1,65,1,65,1,65,1,66,1,66,1,66,1,66,1,66,1,67,1,
+		67,5,67,719,8,67,10,67,12,67,722,9,67,1,68,1,68,1,68,1,68,1,68,1,69,1,
+		69,1,70,1,70,1,70,1,70,1,70,1,70,3,70,737,8,70,1,71,1,71,1,71,1,72,1,72,
+		1,72,1,73,1,73,1,73,1,74,1,74,1,74,1,74,1,75,1,75,1,75,1,76,1,76,1,76,
+		1,76,1,76,1,76,5,76,761,8,76,10,76,12,76,764,9,76,1,76,1,76,3,76,768,8,
+		76,1,76,1,76,1,77,1,77,1,77,1,77,1,77,3,77,777,8,77,1,78,1,78,1,78,1,78,
+		1,78,1,78,1,78,1,78,3,78,787,8,78,1,78,1,78,1,78,1,78,1,78,1,78,1,78,1,
+		78,1,78,1,78,1,78,1,78,5,78,801,8,78,10,78,12,78,804,9,78,1,79,1,79,1,
+		79,1,79,1,79,1,79,1,79,1,79,1,79,3,79,815,8,79,1,80,1,80,1,80,3,80,820,
+		8,80,1,80,3,80,823,8,80,1,81,1,81,1,81,1,82,1,82,1,82,1,83,1,83,1,83,1,
+		84,1,84,1,84,1,85,1,85,1,85,1,86,1,86,1,86,1,86,1,86,1,87,1,87,1,87,1,
+		87,1,87,1,87,3,87,851,8,87,1,88,1,88,1,89,1,89,1,89,1,90,1,90,1,90,1,90,
+		1,90,1,90,1,90,3,90,865,8,90,3,90,867,8,90,1,91,1,91,1,91,1,91,3,91,873,
+		8,91,1,92,1,92,1,92,3,92,878,8,92,1,93,1,93,1,94,1,94,1,94,5,94,885,8,
+		94,10,94,12,94,888,9,94,1,95,1,95,1,95,5,95,893,8,95,10,95,12,95,896,9,
+		95,1,96,1,96,3,96,900,8,96,1,96,3,96,903,8,96,1,97,1,97,1,97,3,97,908,
+		8,97,1,98,1,98,1,99,1,99,1,100,1,100,1,101,1,101,1,102,1,102,1,103,1,103,
+		1,104,1,104,1,104,1,104,1,104,3,104,927,8,104,1,105,1,105,1,106,1,106,
+		1,107,1,107,1,107,0,2,26,156,108,0,2,4,6,8,10,12,14,16,18,20,22,24,26,
+		28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,
+		76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,112,114,116,
+		118,120,122,124,126,128,130,132,134,136,138,140,142,144,146,148,150,152,
+		154,156,158,160,162,164,166,168,170,172,174,176,178,180,182,184,186,188,
+		190,192,194,196,198,200,202,204,206,208,210,212,214,0,13,1,0,504,505,1,
+		0,98,99,3,0,103,105,107,107,132,133,2,0,110,111,120,123,2,0,65,65,126,
+		126,1,0,29,32,1,0,19,21,2,0,13,14,16,17,1,0,110,111,1,0,137,138,1,0,147,
+		207,1,0,69,87,1,0,208,503,976,0,216,1,0,0,0,2,218,1,0,0,0,4,235,1,0,0,
+		0,6,245,1,0,0,0,8,247,1,0,0,0,10,256,1,0,0,0,12,259,1,0,0,0,14,265,1,0,
+		0,0,16,269,1,0,0,0,18,275,1,0,0,0,20,308,1,0,0,0,22,311,1,0,0,0,24,321,
+		1,0,0,0,26,344,1,0,0,0,28,381,1,0,0,0,30,383,1,0,0,0,32,387,1,0,0,0,34,
+		402,1,0,0,0,36,404,1,0,0,0,38,406,1,0,0,0,40,415,1,0,0,0,42,422,1,0,0,
+		0,44,455,1,0,0,0,46,457,1,0,0,0,48,460,1,0,0,0,50,465,1,0,0,0,52,467,1,
+		0,0,0,54,470,1,0,0,0,56,473,1,0,0,0,58,476,1,0,0,0,60,485,1,0,0,0,62,492,
+		1,0,0,0,64,497,1,0,0,0,66,499,1,0,0,0,68,503,1,0,0,0,70,519,1,0,0,0,72,
+		521,1,0,0,0,74,528,1,0,0,0,76,536,1,0,0,0,78,541,1,0,0,0,80,558,1,0,0,
+		0,82,564,1,0,0,0,84,579,1,0,0,0,86,581,1,0,0,0,88,583,1,0,0,0,90,590,1,
+		0,0,0,92,593,1,0,0,0,94,600,1,0,0,0,96,604,1,0,0,0,98,612,1,0,0,0,100,
+		617,1,0,0,0,102,621,1,0,0,0,104,632,1,0,0,0,106,634,1,0,0,0,108,638,1,
+		0,0,0,110,642,1,0,0,0,112,645,1,0,0,0,114,654,1,0,0,0,116,662,1,0,0,0,
+		118,671,1,0,0,0,120,679,1,0,0,0,122,686,1,0,0,0,124,692,1,0,0,0,126,698,
+		1,0,0,0,128,704,1,0,0,0,130,708,1,0,0,0,132,711,1,0,0,0,134,716,1,0,0,
+		0,136,723,1,0,0,0,138,728,1,0,0,0,140,736,1,0,0,0,142,738,1,0,0,0,144,
+		741,1,0,0,0,146,744,1,0,0,0,148,747,1,0,0,0,150,751,1,0,0,0,152,754,1,
+		0,0,0,154,776,1,0,0,0,156,786,1,0,0,0,158,814,1,0,0,0,160,816,1,0,0,0,
+		162,824,1,0,0,0,164,827,1,0,0,0,166,830,1,0,0,0,168,833,1,0,0,0,170,836,
+		1,0,0,0,172,839,1,0,0,0,174,850,1,0,0,0,176,852,1,0,0,0,178,854,1,0,0,
+		0,180,857,1,0,0,0,182,872,1,0,0,0,184,877,1,0,0,0,186,879,1,0,0,0,188,
+		881,1,0,0,0,190,889,1,0,0,0,192,902,1,0,0,0,194,907,1,0,0,0,196,909,1,
+		0,0,0,198,911,1,0,0,0,200,913,1,0,0,0,202,915,1,0,0,0,204,917,1,0,0,0,
+		206,919,1,0,0,0,208,926,1,0,0,0,210,928,1,0,0,0,212,930,1,0,0,0,214,932,
+		1,0,0,0,216,217,6,0,-1,0,217,1,1,0,0,0,218,219,3,4,2,0,219,220,5,0,0,1,
+		220,3,1,0,0,0,221,223,3,6,3,0,222,224,5,97,0,0,223,222,1,0,0,0,224,225,
+		1,0,0,0,225,223,1,0,0,0,225,226,1,0,0,0,226,227,1,0,0,0,227,228,3,4,2,
+		0,228,236,1,0,0,0,229,230,3,6,3,0,230,231,3,0,0,0,231,232,3,4,2,0,232,
+		236,1,0,0,0,233,236,3,6,3,0,234,236,1,0,0,0,235,221,1,0,0,0,235,229,1,
+		0,0,0,235,233,1,0,0,0,235,234,1,0,0,0,236,5,1,0,0,0,237,246,3,12,6,0,238,
+		246,3,10,5,0,239,246,3,158,79,0,240,246,3,16,8,0,241,246,3,14,7,0,242,
+		246,3,44,22,0,243,246,3,140,70,0,244,246,3,8,4,0,245,237,1,0,0,0,245,238,
+		1,0,0,0,245,239,1,0,0,0,245,240,1,0,0,0,245,241,1,0,0,0,245,242,1,0,0,
+		0,245,243,1,0,0,0,245,244,1,0,0,0,246,7,1,0,0,0,247,248,7,0,0,0,248,9,
+		1,0,0,0,249,250,3,182,91,0,250,251,5,96,0,0,251,252,3,6,3,0,252,257,1,
+		0,0,0,253,254,3,182,91,0,254,255,5,96,0,0,255,257,1,0,0,0,256,249,1,0,
+		0,0,256,253,1,0,0,0,257,11,1,0,0,0,258,260,5,96,0,0,259,258,1,0,0,0,259,
+		260,1,0,0,0,260,261,1,0,0,0,261,263,3,208,104,0,262,264,3,18,9,0,263,262,
+		1,0,0,0,263,264,1,0,0,0,264,13,1,0,0,0,265,266,5,88,0,0,266,267,3,4,2,
+		0,267,268,5,89,0,0,268,15,1,0,0,0,269,270,5,504,0,0,270,271,5,96,0,0,271,
+		272,5,88,0,0,272,273,3,4,2,0,273,274,5,89,0,0,274,17,1,0,0,0,275,280,3,
+		20,10,0,276,277,5,95,0,0,277,279,3,20,10,0,278,276,1,0,0,0,279,282,1,0,
+		0,0,280,278,1,0,0,0,280,281,1,0,0,0,281,19,1,0,0,0,282,280,1,0,0,0,283,
+		285,7,1,0,0,284,283,1,0,0,0,285,286,1,0,0,0,286,284,1,0,0,0,286,287,1,
+		0,0,0,287,309,1,0,0,0,288,289,5,3,0,0,289,309,3,214,107,0,290,291,5,3,
+		0,0,291,309,3,192,96,0,292,293,5,3,0,0,293,309,3,22,11,0,294,309,3,22,
+		11,0,295,296,5,92,0,0,296,297,3,18,9,0,297,298,5,93,0,0,298,309,1,0,0,
+		0,299,300,5,90,0,0,300,301,3,18,9,0,301,302,5,91,0,0,302,309,1,0,0,0,303,
+		309,3,24,12,0,304,305,5,100,0,0,305,309,3,26,13,0,306,309,3,26,13,0,307,
+		309,5,100,0,0,308,284,1,0,0,0,308,288,1,0,0,0,308,290,1,0,0,0,308,292,
+		1,0,0,0,308,294,1,0,0,0,308,295,1,0,0,0,308,299,1,0,0,0,308,303,1,0,0,
+		0,308,304,1,0,0,0,308,306,1,0,0,0,308,307,1,0,0,0,309,21,1,0,0,0,310,312,
+		3,196,98,0,311,310,1,0,0,0,311,312,1,0,0,0,312,313,1,0,0,0,313,314,5,504,
+		0,0,314,23,1,0,0,0,315,316,3,182,91,0,316,317,5,99,0,0,317,322,1,0,0,0,
+		318,319,3,182,91,0,319,320,5,98,0,0,320,322,1,0,0,0,321,315,1,0,0,0,321,
+		318,1,0,0,0,322,25,1,0,0,0,323,324,6,13,-1,0,324,325,5,92,0,0,325,326,
+		3,26,13,0,326,327,5,93,0,0,327,345,1,0,0,0,328,329,5,90,0,0,329,330,3,
+		26,13,0,330,331,5,91,0,0,331,345,1,0,0,0,332,333,5,98,0,0,333,345,3,26,
+		13,12,334,335,5,99,0,0,335,345,3,26,13,11,336,345,3,38,19,0,337,345,3,
+		40,20,0,338,345,3,192,96,0,339,345,3,214,107,0,340,345,3,212,106,0,341,
+		345,3,204,102,0,342,345,3,182,91,0,343,345,5,143,0,0,344,323,1,0,0,0,344,
+		328,1,0,0,0,344,332,1,0,0,0,344,334,1,0,0,0,344,336,1,0,0,0,344,337,1,
+		0,0,0,344,338,1,0,0,0,344,339,1,0,0,0,344,340,1,0,0,0,344,341,1,0,0,0,
+		344,342,1,0,0,0,344,343,1,0,0,0,345,378,1,0,0,0,346,347,10,19,0,0,347,
+		348,3,28,14,0,348,349,3,26,13,20,349,377,1,0,0,0,350,351,10,18,0,0,351,
+		352,5,100,0,0,352,377,3,26,13,19,353,354,10,17,0,0,354,355,5,101,0,0,355,
+		377,3,26,13,18,356,357,10,16,0,0,357,358,5,98,0,0,358,377,3,26,13,17,359,
+		360,10,15,0,0,360,361,5,99,0,0,361,377,3,26,13,16,362,363,10,10,0,0,363,
+		364,3,36,18,0,364,365,3,26,13,11,365,377,1,0,0,0,366,367,10,9,0,0,367,
+		368,5,112,0,0,368,369,3,26,13,0,369,370,5,96,0,0,370,371,3,26,13,10,371,
+		377,1,0,0,0,372,373,10,14,0,0,373,377,5,115,0,0,374,375,10,13,0,0,375,
+		377,5,116,0,0,376,346,1,0,0,0,376,350,1,0,0,0,376,353,1,0,0,0,376,356,
+		1,0,0,0,376,359,1,0,0,0,376,362,1,0,0,0,376,366,1,0,0,0,376,372,1,0,0,
+		0,376,374,1,0,0,0,377,380,1,0,0,0,378,376,1,0,0,0,378,379,1,0,0,0,379,
+		27,1,0,0,0,380,378,1,0,0,0,381,382,7,2,0,0,382,29,1,0,0,0,383,384,5,504,
+		0,0,384,385,5,109,0,0,385,386,3,26,13,0,386,31,1,0,0,0,387,388,5,504,0,
+		0,388,389,3,34,17,0,389,33,1,0,0,0,390,391,5,98,0,0,391,403,5,98,0,0,392,
+		393,5,99,0,0,393,403,5,99,0,0,394,395,5,98,0,0,395,403,5,109,0,0,396,397,
+		5,99,0,0,397,403,5,109,0,0,398,399,5,100,0,0,399,403,5,109,0,0,400,401,
+		5,101,0,0,401,403,5,109,0,0,402,390,1,0,0,0,402,392,1,0,0,0,402,394,1,
+		0,0,0,402,396,1,0,0,0,402,398,1,0,0,0,402,400,1,0,0,0,403,35,1,0,0,0,404,
+		405,7,3,0,0,405,37,1,0,0,0,406,407,5,143,0,0,407,408,5,94,0,0,408,409,
+		5,143,0,0,409,411,5,92,0,0,410,412,3,18,9,0,411,410,1,0,0,0,411,412,1,
+		0,0,0,412,413,1,0,0,0,413,414,5,93,0,0,414,39,1,0,0,0,415,416,5,504,0,
+		0,416,418,5,92,0,0,417,419,3,18,9,0,418,417,1,0,0,0,418,419,1,0,0,0,419,
+		420,1,0,0,0,420,421,5,93,0,0,421,41,1,0,0,0,422,423,3,26,13,0,423,43,1,
+		0,0,0,424,456,3,46,23,0,425,456,3,48,24,0,426,456,3,54,27,0,427,456,3,
+		56,28,0,428,456,3,58,29,0,429,456,3,60,30,0,430,456,3,62,31,0,431,456,
+		3,66,33,0,432,456,3,68,34,0,433,456,3,72,36,0,434,456,3,78,39,0,435,456,
+		3,80,40,0,436,456,3,82,41,0,437,456,3,88,44,0,438,456,3,92,46,0,439,456,
+		3,94,47,0,440,456,3,98,49,0,441,456,3,100,50,0,442,456,3,104,52,0,443,
+		456,3,106,53,0,444,456,3,108,54,0,445,456,3,102,51,0,446,456,3,110,55,
+		0,447,456,3,112,56,0,448,456,3,122,61,0,449,456,3,124,62,0,450,456,3,90,
+		45,0,451,456,3,126,63,0,452,456,3,128,64,0,453,456,3,130,65,0,454,456,
+		3,132,66,0,455,424,1,0,0,0,455,425,1,0,0,0,455,426,1,0,0,0,455,427,1,0,
+		0,0,455,428,1,0,0,0,455,429,1,0,0,0,455,430,1,0,0,0,455,431,1,0,0,0,455,
+		432,1,0,0,0,455,433,1,0,0,0,455,434,1,0,0,0,455,435,1,0,0,0,455,436,1,
+		0,0,0,455,437,1,0,0,0,455,438,1,0,0,0,455,439,1,0,0,0,455,440,1,0,0,0,
+		455,441,1,0,0,0,455,442,1,0,0,0,455,443,1,0,0,0,455,444,1,0,0,0,455,445,
+		1,0,0,0,455,446,1,0,0,0,455,447,1,0,0,0,455,448,1,0,0,0,455,449,1,0,0,
+		0,455,450,1,0,0,0,455,451,1,0,0,0,455,452,1,0,0,0,455,453,1,0,0,0,455,
+		454,1,0,0,0,456,45,1,0,0,0,457,458,5,35,0,0,458,459,3,26,13,0,459,47,1,
+		0,0,0,460,461,5,36,0,0,461,462,3,26,13,0,462,49,1,0,0,0,463,466,3,52,26,
+		0,464,466,3,30,15,0,465,463,1,0,0,0,465,464,1,0,0,0,466,51,1,0,0,0,467,
+		468,5,38,0,0,468,469,3,30,15,0,469,53,1,0,0,0,470,471,5,37,0,0,471,472,
+		3,30,15,0,472,55,1,0,0,0,473,474,5,40,0,0,474,475,3,30,15,0,475,57,1,0,
+		0,0,476,477,5,41,0,0,477,478,5,92,0,0,478,479,3,26,13,0,479,480,5,93,0,
+		0,480,483,3,6,3,0,481,482,5,42,0,0,482,484,3,6,3,0,483,481,1,0,0,0,483,
+		484,1,0,0,0,484,59,1,0,0,0,485,486,5,43,0,0,486,487,5,92,0,0,487,488,3,
+		26,13,0,488,489,5,93,0,0,489,490,5,95,0,0,490,491,5,143,0,0,491,61,1,0,
+		0,0,492,493,5,44,0,0,493,494,3,64,32,0,494,63,1,0,0,0,495,498,3,30,15,
+		0,496,498,3,32,16,0,497,495,1,0,0,0,497,496,1,0,0,0,498,65,1,0,0,0,499,
+		501,5,66,0,0,500,502,5,143,0,0,501,500,1,0,0,0,501,502,1,0,0,0,502,67,
+		1,0,0,0,503,504,5,67,0,0,504,505,3,70,35,0,505,69,1,0,0,0,506,520,3,26,
+		13,0,507,508,3,26,13,0,508,509,5,95,0,0,509,510,3,26,13,0,510,520,1,0,
+		0,0,511,512,3,26,13,0,512,514,5,95,0,0,513,515,3,26,13,0,514,513,1,0,0,
+		0,514,515,1,0,0,0,515,516,1,0,0,0,516,517,5,95,0,0,517,518,5,143,0,0,518,
+		520,1,0,0,0,519,506,1,0,0,0,519,507,1,0,0,0,519,511,1,0,0,0,520,71,1,0,
+		0,0,521,522,5,45,0,0,522,524,5,88,0,0,523,525,3,74,37,0,524,523,1,0,0,
+		0,524,525,1,0,0,0,525,526,1,0,0,0,526,527,5,89,0,0,527,73,1,0,0,0,528,
+		533,3,76,38,0,529,530,5,95,0,0,530,532,3,76,38,0,531,529,1,0,0,0,532,535,
+		1,0,0,0,533,531,1,0,0,0,533,534,1,0,0,0,534,75,1,0,0,0,535,533,1,0,0,0,
+		536,539,5,504,0,0,537,538,5,109,0,0,538,540,3,194,97,0,539,537,1,0,0,0,
+		539,540,1,0,0,0,540,77,1,0,0,0,541,542,5,46,0,0,542,544,5,92,0,0,543,545,
+		3,50,25,0,544,543,1,0,0,0,544,545,1,0,0,0,545,546,1,0,0,0,546,548,5,97,
+		0,0,547,549,3,42,21,0,548,547,1,0,0,0,548,549,1,0,0,0,549,550,1,0,0,0,
+		550,552,5,97,0,0,551,553,3,26,13,0,552,551,1,0,0,0,552,553,1,0,0,0,553,
+		554,1,0,0,0,554,556,5,93,0,0,555,557,3,6,3,0,556,555,1,0,0,0,556,557,1,
+		0,0,0,557,79,1,0,0,0,558,559,5,47,0,0,559,560,5,92,0,0,560,561,3,42,21,
+		0,561,562,5,93,0,0,562,563,3,6,3,0,563,81,1,0,0,0,564,565,5,48,0,0,565,
+		566,5,504,0,0,566,567,5,88,0,0,567,568,3,84,42,0,568,569,5,89,0,0,569,
+		83,1,0,0,0,570,575,3,86,43,0,571,572,5,95,0,0,572,574,3,86,43,0,573,571,
+		1,0,0,0,574,577,1,0,0,0,575,573,1,0,0,0,575,576,1,0,0,0,576,580,1,0,0,
+		0,577,575,1,0,0,0,578,580,1,0,0,0,579,570,1,0,0,0,579,578,1,0,0,0,580,
+		85,1,0,0,0,581,582,5,504,0,0,582,87,1,0,0,0,583,584,5,50,0,0,584,585,3,
+		184,92,0,585,586,5,92,0,0,586,587,3,84,42,0,587,588,5,93,0,0,588,589,3,
+		14,7,0,589,89,1,0,0,0,590,591,5,51,0,0,591,592,3,26,13,0,592,91,1,0,0,
+		0,593,594,5,52,0,0,594,595,3,184,92,0,595,596,5,92,0,0,596,597,3,84,42,
+		0,597,598,5,93,0,0,598,599,3,14,7,0,599,93,1,0,0,0,600,601,5,53,0,0,601,
+		602,5,504,0,0,602,603,3,96,48,0,603,95,1,0,0,0,604,609,5,504,0,0,605,606,
+		5,96,0,0,606,608,5,504,0,0,607,605,1,0,0,0,608,611,1,0,0,0,609,607,1,0,
+		0,0,609,610,1,0,0,0,610,97,1,0,0,0,611,609,1,0,0,0,612,613,5,55,0,0,613,
+		615,5,504,0,0,614,616,3,14,7,0,615,614,1,0,0,0,615,616,1,0,0,0,616,99,
+		1,0,0,0,617,618,5,62,0,0,618,619,3,30,15,0,619,620,3,14,7,0,620,101,1,
+		0,0,0,621,622,5,61,0,0,622,623,5,143,0,0,623,103,1,0,0,0,624,625,5,56,
+		0,0,625,626,5,504,0,0,626,633,3,116,58,0,627,628,5,56,0,0,628,629,5,504,
+		0,0,629,633,5,143,0,0,630,631,5,56,0,0,631,633,5,504,0,0,632,624,1,0,0,
+		0,632,627,1,0,0,0,632,630,1,0,0,0,633,105,1,0,0,0,634,635,5,57,0,0,635,
+		636,5,504,0,0,636,637,3,116,58,0,637,107,1,0,0,0,638,639,5,58,0,0,639,
+		640,5,504,0,0,640,641,3,116,58,0,641,109,1,0,0,0,642,643,5,63,0,0,643,
+		644,3,116,58,0,644,111,1,0,0,0,645,647,5,64,0,0,646,648,5,504,0,0,647,
+		646,1,0,0,0,647,648,1,0,0,0,648,649,1,0,0,0,649,650,3,116,58,0,650,651,
+		5,88,0,0,651,652,3,114,57,0,652,653,5,89,0,0,653,113,1,0,0,0,654,659,3,
+		116,58,0,655,656,5,95,0,0,656,658,3,116,58,0,657,655,1,0,0,0,658,661,1,
+		0,0,0,659,657,1,0,0,0,659,660,1,0,0,0,660,115,1,0,0,0,661,659,1,0,0,0,
+		662,666,5,90,0,0,663,665,3,118,59,0,664,663,1,0,0,0,665,668,1,0,0,0,666,
+		664,1,0,0,0,666,667,1,0,0,0,667,669,1,0,0,0,668,666,1,0,0,0,669,670,5,
+		91,0,0,670,117,1,0,0,0,671,676,3,120,60,0,672,673,5,95,0,0,673,675,3,120,
+		60,0,674,672,1,0,0,0,675,678,1,0,0,0,676,674,1,0,0,0,676,677,1,0,0,0,677,
+		119,1,0,0,0,678,676,1,0,0,0,679,680,5,504,0,0,680,684,5,109,0,0,681,685,
+		3,194,97,0,682,685,5,143,0,0,683,685,3,204,102,0,684,681,1,0,0,0,684,682,
+		1,0,0,0,684,683,1,0,0,0,685,121,1,0,0,0,686,687,5,59,0,0,687,688,5,504,
+		0,0,688,689,5,92,0,0,689,690,5,93,0,0,690,691,3,14,7,0,691,123,1,0,0,0,
+		692,693,5,60,0,0,693,694,5,504,0,0,694,695,5,92,0,0,695,696,3,20,10,0,
+		696,697,5,93,0,0,697,125,1,0,0,0,698,699,5,33,0,0,699,700,5,143,0,0,700,
+		701,3,6,3,0,701,702,5,95,0,0,702,703,3,6,3,0,703,127,1,0,0,0,704,705,5,
+		34,0,0,705,706,5,143,0,0,706,707,3,6,3,0,707,129,1,0,0,0,708,709,3,192,
+		96,0,709,710,3,14,7,0,710,131,1,0,0,0,711,712,5,68,0,0,712,713,5,88,0,
+		0,713,714,3,134,67,0,714,715,5,89,0,0,715,133,1,0,0,0,716,720,3,136,68,
+		0,717,719,3,136,68,0,718,717,1,0,0,0,719,722,1,0,0,0,720,718,1,0,0,0,720,
+		721,1,0,0,0,721,135,1,0,0,0,722,720,1,0,0,0,723,724,3,184,92,0,724,725,
+		5,96,0,0,725,726,5,26,0,0,726,727,5,139,0,0,727,137,1,0,0,0,728,729,5,
+		504,0,0,729,139,1,0,0,0,730,737,3,142,71,0,731,737,3,144,72,0,732,737,
+		3,146,73,0,733,737,3,148,74,0,734,737,3,150,75,0,735,737,3,152,76,0,736,
+		730,1,0,0,0,736,731,1,0,0,0,736,732,1,0,0,0,736,733,1,0,0,0,736,734,1,
+		0,0,0,736,735,1,0,0,0,737,141,1,0,0,0,738,739,5,4,0,0,739,740,5,506,0,
+		0,740,143,1,0,0,0,741,742,5,5,0,0,742,743,5,508,0,0,743,145,1,0,0,0,744,
+		745,5,10,0,0,745,746,5,143,0,0,746,147,1,0,0,0,747,748,5,12,0,0,748,749,
+		5,513,0,0,749,750,5,143,0,0,750,149,1,0,0,0,751,752,5,11,0,0,752,753,5,
+		143,0,0,753,151,1,0,0,0,754,755,5,6,0,0,755,756,5,510,0,0,756,762,3,154,
+		77,0,757,758,5,9,0,0,758,759,5,510,0,0,759,761,3,154,77,0,760,757,1,0,
+		0,0,761,764,1,0,0,0,762,760,1,0,0,0,762,763,1,0,0,0,763,767,1,0,0,0,764,
+		762,1,0,0,0,765,766,5,8,0,0,766,768,3,154,77,0,767,765,1,0,0,0,767,768,
+		1,0,0,0,768,769,1,0,0,0,769,770,5,7,0,0,770,153,1,0,0,0,771,772,3,0,0,
+		0,772,773,3,6,3,0,773,774,3,0,0,0,774,777,1,0,0,0,775,777,3,0,0,0,776,
+		771,1,0,0,0,776,775,1,0,0,0,777,155,1,0,0,0,778,779,6,78,-1,0,779,780,
+		5,92,0,0,780,781,3,156,78,0,781,782,5,93,0,0,782,787,1,0,0,0,783,784,5,
+		106,0,0,784,787,3,156,78,6,785,787,5,504,0,0,786,778,1,0,0,0,786,783,1,
+		0,0,0,786,785,1,0,0,0,787,802,1,0,0,0,788,789,10,5,0,0,789,790,5,117,0,
+		0,790,801,3,156,78,6,791,792,10,4,0,0,792,793,5,118,0,0,793,801,3,156,
+		78,5,794,795,10,3,0,0,795,796,5,120,0,0,796,801,3,156,78,4,797,798,10,
+		2,0,0,798,799,5,121,0,0,799,801,3,156,78,3,800,788,1,0,0,0,800,791,1,0,
+		0,0,800,794,1,0,0,0,800,797,1,0,0,0,801,804,1,0,0,0,802,800,1,0,0,0,802,
+		803,1,0,0,0,803,157,1,0,0,0,804,802,1,0,0,0,805,815,3,162,81,0,806,815,
+		3,164,82,0,807,815,3,166,83,0,808,815,3,168,84,0,809,815,3,170,85,0,810,
+		815,3,172,86,0,811,815,3,178,89,0,812,815,3,180,90,0,813,815,3,160,80,
+		0,814,805,1,0,0,0,814,806,1,0,0,0,814,807,1,0,0,0,814,808,1,0,0,0,814,
+		809,1,0,0,0,814,810,1,0,0,0,814,811,1,0,0,0,814,812,1,0,0,0,814,813,1,
+		0,0,0,815,159,1,0,0,0,816,817,7,4,0,0,817,819,3,194,97,0,818,820,5,143,
+		0,0,819,818,1,0,0,0,819,820,1,0,0,0,820,822,1,0,0,0,821,823,5,504,0,0,
+		822,821,1,0,0,0,822,823,1,0,0,0,823,161,1,0,0,0,824,825,5,25,0,0,825,826,
+		7,5,0,0,826,163,1,0,0,0,827,828,5,26,0,0,828,829,3,188,94,0,829,165,1,
+		0,0,0,830,831,5,27,0,0,831,832,3,188,94,0,832,167,1,0,0,0,833,834,5,28,
+		0,0,834,835,3,188,94,0,835,169,1,0,0,0,836,837,5,15,0,0,837,838,5,143,
+		0,0,838,171,1,0,0,0,839,840,7,6,0,0,840,841,3,194,97,0,841,842,5,95,0,
+		0,842,843,3,174,87,0,843,173,1,0,0,0,844,851,3,194,97,0,845,846,5,90,0,
+		0,846,847,3,188,94,0,847,848,5,91,0,0,848,851,1,0,0,0,849,851,3,176,88,
+		0,850,844,1,0,0,0,850,845,1,0,0,0,850,849,1,0,0,0,851,175,1,0,0,0,852,
+		853,1,0,0,0,853,177,1,0,0,0,854,855,5,18,0,0,855,856,5,143,0,0,856,179,
+		1,0,0,0,857,858,5,39,0,0,858,859,7,7,0,0,859,866,3,186,93,0,860,861,5,
+		95,0,0,861,864,3,194,97,0,862,863,5,95,0,0,863,865,3,194,97,0,864,862,
+		1,0,0,0,864,865,1,0,0,0,865,867,1,0,0,0,866,860,1,0,0,0,866,867,1,0,0,
+		0,867,181,1,0,0,0,868,869,5,106,0,0,869,873,5,504,0,0,870,873,5,106,0,
+		0,871,873,3,184,92,0,872,868,1,0,0,0,872,870,1,0,0,0,872,871,1,0,0,0,873,
+		183,1,0,0,0,874,875,5,108,0,0,875,878,5,504,0,0,876,878,5,504,0,0,877,
+		874,1,0,0,0,877,876,1,0,0,0,878,185,1,0,0,0,879,880,5,143,0,0,880,187,
+		1,0,0,0,881,886,3,194,97,0,882,883,5,95,0,0,883,885,3,194,97,0,884,882,
+		1,0,0,0,885,888,1,0,0,0,886,884,1,0,0,0,886,887,1,0,0,0,887,189,1,0,0,
+		0,888,886,1,0,0,0,889,894,3,192,96,0,890,891,5,95,0,0,891,893,3,192,96,
+		0,892,890,1,0,0,0,893,896,1,0,0,0,894,892,1,0,0,0,894,895,1,0,0,0,895,
+		191,1,0,0,0,896,894,1,0,0,0,897,903,5,142,0,0,898,900,3,196,98,0,899,898,
+		1,0,0,0,899,900,1,0,0,0,900,901,1,0,0,0,901,903,3,194,97,0,902,897,1,0,
+		0,0,902,899,1,0,0,0,903,193,1,0,0,0,904,908,3,198,99,0,905,908,3,200,100,
+		0,906,908,3,202,101,0,907,904,1,0,0,0,907,905,1,0,0,0,907,906,1,0,0,0,
+		908,195,1,0,0,0,909,910,7,8,0,0,910,197,1,0,0,0,911,912,5,139,0,0,912,
+		199,1,0,0,0,913,914,5,140,0,0,914,201,1,0,0,0,915,916,5,141,0,0,916,203,
+		1,0,0,0,917,918,7,9,0,0,918,205,1,0,0,0,919,920,5,504,0,0,920,207,1,0,
+		0,0,921,927,3,210,105,0,922,923,3,210,105,0,923,924,5,94,0,0,924,925,3,
+		206,103,0,925,927,1,0,0,0,926,921,1,0,0,0,926,922,1,0,0,0,927,209,1,0,
+		0,0,928,929,7,10,0,0,929,211,1,0,0,0,930,931,7,11,0,0,931,213,1,0,0,0,
+		932,933,7,12,0,0,933,215,1,0,0,0,63,225,235,245,256,259,263,280,286,308,
+		311,321,344,376,378,402,411,418,455,465,483,497,501,514,519,524,533,539,
+		544,548,552,556,575,579,609,615,632,647,659,666,676,684,720,736,762,767,
+		776,786,800,802,814,819,822,850,864,866,872,877,886,894,899,902,907,926
 	};
 
 	public static readonly ATN _ATN =

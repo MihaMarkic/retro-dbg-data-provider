@@ -52,6 +52,8 @@ argument
 	: (PLUS | MINUS)+
 	| HASH opcodeConstant
 	| HASH numeric
+	| HASH variableReference                                // label reference
+	| variableReference
 	| OPEN_PARENS argumentList CLOSE_PARENS
 	| OPEN_BRACKET argumentList CLOSE_BRACKET
 	| labelOffsetReference
@@ -59,6 +61,10 @@ argument
 	| expression
 	| STAR                                                  // jmp *
 	;
+	
+variableReference:
+    lohibyte? UNQUOTED_STRING;
+    
 labelOffsetReference
     : labelName MINUS
     | labelName PLUS;
