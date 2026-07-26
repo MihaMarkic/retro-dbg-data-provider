@@ -52,7 +52,7 @@ public sealed class KickAssemblerSourceCodeParser : SourceCodeParser<KickAssembl
     }
 
     /// <inheritdoc cref="ISourceCodeParser{T}.ParseAsync"/>
-    public Task ParseAsync(FrozenDictionary<string, InMemoryFileContent> inMemoryFilesContent,
+    public async Task ParseAsync(FrozenDictionary<string, InMemoryFileContent> inMemoryFilesContent,
         FrozenSet<string> inDefines,
         ImmutableArray<string> libraryDirectories, CancellationToken ct = default)
     {
@@ -61,9 +61,12 @@ public sealed class KickAssemblerSourceCodeParser : SourceCodeParser<KickAssembl
             _logger.LogError("Not initialized");
             throw new Exception("KickAssemblerSourceCodeParser has not been initialized");
         }
+        
+        _logger.LogInformation("Starting parsing task");
+        await StopAsync();
 
         ParsingTask = ParseInternalAsync(_mainFile, inMemoryFilesContent, inDefines, libraryDirectories, ct);
-        return ParsingTask;
+        await ParsingTask;
     }
 
     /// <summary>
@@ -81,9 +84,6 @@ public sealed class KickAssemblerSourceCodeParser : SourceCodeParser<KickAssembl
     {
         try
         {
-            _logger.LogInformation("Starting parsing task");
-            await StopAsync();
-
             _parsingCts = new();
             using (var linkedCancellationSource =
                    CancellationTokenSource.CreateLinkedTokenSource(_parsingCts.Token, ct))
